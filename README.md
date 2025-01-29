@@ -1,3 +1,35 @@
+- [ ] Overview
+  - [ ] Live Link
+- [ ] UX Design Process
+  - [ ] User Stories
+  - [ ] Wireframes
+  - [ ] Design
+    - [ ] Colour Scheme
+    - [ ] Topography
+- [ ] Features
+  - [ ] Significant Changes
+- [ ] Agile
+  - [ ] Link to Project Board
+- [ ] Testing
+  - [ ] Manual Testing
+  - [ ] Automated Testing (AI)
+  - [ ] Known Bugs
+- [ ] Future Features
+- [ ] Technology Used
+- [ ] AI Implementation
+  - [ ] Use Cases & Reflections
+  - [ ] Code Creation
+  - [ ] Debugging
+  - [ ] Performance and UX Optimization
+  - [ ] Automated Unit Testing
+  - [ ] Overall Impact
+- [ ] Deployment
+  - [ ] Platform
+  - [ ] Deployment Steps
+  - [ ] Verification & Validation
+  - [ ] Security Measures
+- [ ] Credits
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome USER_NAME,
