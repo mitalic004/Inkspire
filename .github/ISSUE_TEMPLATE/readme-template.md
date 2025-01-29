@@ -10,7 +10,7 @@ assignees: mitalic004
 Complete writeup of README.md to support project.
 
 Tasks:
-[ ] 
-[ ] 
-[ ] 
-[ ]
+- [ ] 
+- [ ] 
+- [ ] 
+- [ ]
