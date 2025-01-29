@@ -3,11 +3,11 @@ name: User Story
 about: Custom template for User Stories.
 title: ''
 labels: ''
-assignees: ''
+assignees: mitalic004
 
 ---
 
-As a **role** I can **capability** so that **received benefit**
+As a **role** I can **capability** so that **benefit**.
 
 [ ] Acceptance criteria 1
 [ ] Acceptance criteria 2
