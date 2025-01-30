@@ -1,163 +1,330 @@
-- [ ] Overview
-  - [ ] Live Link
-- [ ] UX Design Process
-  - [ ] User Stories
-  - [ ] Wireframes
-  - [ ] Design
-    - [ ] Colour Scheme
-    - [ ] Topography
-- [ ] Features
-  - [ ] Significant Changes
-- [ ] Agile
-  - [ ] Link to Project Board
-- [ ] Testing
-  - [ ] Manual Testing
-  - [ ] Automated Testing (AI)
-  - [ ] Known Bugs
-- [ ] Future Features
-- [ ] Technology Used
-- [ ] AI Implementation
-  - [ ] Use Cases & Reflections
-  - [ ] Code Creation
-  - [ ] Debugging
-  - [ ] Performance and UX Optimization
-  - [ ] Automated Unit Testing
-  - [ ] Overall Impact
-- [ ] Deployment
-  - [ ] Platform
-  - [ ] Deployment Steps
-  - [ ] Verification & Validation
-  - [ ] Security Measures
-- [ ] Credits
+# Inkspire
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<p align="center">
+| <a href="https://github.com/mitalic004/Inkspire" target="_blank">Live Project</a> |
+</p>
 
-Welcome USER_NAME,
+<a id="overview"></a>
+## Overview
+Inkspire is a assessed portfolio project developed as part of the Code Institute Full Stack Software Developer Bootcamp, with the intention of demonstrating proficiency in Python, Django [] to create a responsive website.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The intention of this project was to create an interactive website for []
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+The users can register an account and login to []
 
-## Gitpod Reminders
+![Responsive Mockup]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## Contents
+- [Overview](#overview)
+- [UX](#user-experience)
+  - [User Stories](#user-stories)
+  - [Wireframes](#wireframes)
+- [Design](#design)
+  - [Topography](#topography)
+  - [Colour Scheme](#colour-scheme)
+- [Features](#features)
+- [Agile](#agile)
+- [Testing](#testing)
+  - [Verification & Validation](#valid-test)
+  - [Manual Testing](#manual-test)
+  - [Automated Testing](#auto-test)
+  - [Known Bugs](#bugs)
+- [Future Features](#future-features)
+- [AI Implementation](#ai-implementation)
+  - [Use Cases & Reflections](#ai-use)
+  - [Code Creation](#ai-code)
+  - [Debugging](#ai-debug)
+  - [Performance and UX Optimization](#ai-optimization)
+  - [Automated Unit Testing](#ai-test)
+  - [Overall Impact](#ai-impact)
+- [Technology Used](#tech-used)
+- [Deployment](#deployment)
+  - [Security Measures](#security)
+- [Credits](#credits)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+<a id="user-experience"></a>
+## UX (User Experience)
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+<a id="user-stories"></a>
+### User Stories
 
-A blue button should appear to click: _Make Public_,
+<hr>
 
-Another blue button should appear to click: _Open Browser_.
+<a id="wireframes"></a>
+### Wireframes
+Wireframes for all pages of the website were created before coding began. Versions for desktop, tablet and mobile size were created to reflect the responsive design expected. 
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+For the most part, the designs remained consistent with the implementation, but some changes were made - they will be shown and explained below.
 
-To log into the Heroku toolbelt CLI:
+- Landing Page
+  - The homepage has stayed mostly the same as the wireframe.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Homepage Desktop](assets/images-readme/Wireframe-Homepage-Desktop.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+![Homepage Tablet & Mobile](assets/images-readme/Wireframe-Homepage-TabletMobile.png)
 
-### Connecting your Mongo database
+- 2 Page
+  - AA
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+![2 Desktop]()
 
-------
+![2 Tablet & Mobile]()
 
-## Release History
+- 3 Page
+  - AA
+  
+![3 Desktop]()
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+![3 Tablet & Mobile]()
 
-**June 18, 2024,** Add Mongo back into template
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+<a id="design"></a>
+## Design
 
-**May 28 2024:** Fix Mongo and Links installs
+<a id="topography"></a>
+### Typography
 
-**April 26 2024:** Update node version to 16
+The project used two sans-serif fonts which were implemented via [Google Fonts](https://fonts.google.com).
 
-**September 20 2023:** Update Python version to 3.9.17.
+- [Font1]() was used as the main logo and heading font to make it stand out and fit with the theme of the website.
+- [Font2]() was used for all the links and main content of the website to ensure easy readability.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<hr>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<a id="colour-scheme"></a>
+### Colour Scheme
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with. Some colours were not used in the final implementation, as they did not contrast enough to provide a suitable user experience.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- `#606C38` used for: read aloud buttons
+- `#283618` used for: header & footer backgrounds, form & modal pop-up backgrounds, homepage headings & text, special buttons
+- `#FEFAE0` used for: form & modal pop-up text, button text, selected buttons
+- `#BC6C25` used for: buttons, selected button text, footer text & icon colour
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Colour Palette](assets/images-readme/Colour-Palette.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<a id="features"></a>
+## Website Features
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The website consists of three pages with distinct sections to ensure a good user experience. All features on the website were implemented using a combination of HTML5, CSS (including Bootstrap) and JavaScript and are responsive on multiple device sizes in accordance with appropriate breakpoints. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Header Navigation Bar
+  - A sticky navigation bar on all pages with the logo and website title which redirects to the homepage
+  - Links to other pages on the website
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![Navigation Bar](assets/images-readme/NavBar.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- Feature
+  - Explaination
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+![FeatImg]()
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+- Footer
+  - Copyright details
+  - Links to GitHub repository and social media sites
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Footer](assets/images-readme/Footer.png)
 
-------
+<a id="agile"></a>
+## Agile
+[Project Board Link](https://github.com/users/mitalic004/projects/2)
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+<a id="testing"></a>
+## Testing
+Validation of HTML/CSS/JavaScript, Lighthouse Audits, Bugs
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<a id="valid-test"></a>
+### Verification & Validation
+#### Google Lighthouse Testing
 
-**How will this affect me?**
+Good scores were achieved for both Desktop and Mobile when passing through the official [Google Lighthouse](https://pagespeed.web.dev/)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- Desktop
+![Desktop Results](assets/images-readme/Lighthouse_Desktop.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+- Mobile
+![Mobile Results](assets/images-readme/Lighthouse_Mobile.png)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<hr>
 
-**So….?**
+#### Validation Testing
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+- HTML
+  - Some error were returned when passing through the official [W3C validator](https://validator.w3.org/nu/)
+  - These could not be addressed in the time available
 
-**Can I opt out?**
+![HTML Validation Homepage](assets/images-readme/HTMLValidation_Home.png)
+![HTML Validation Enquiry](assets/images-readme/HTMLValidation_Enquiry.png)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+- CSS
+  - One error was found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+![CSS Validation](assets/images-readme/CSSValidation.png)
 
-**Anything more?**
+<hr>
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- JavaScript
+  - No errors were found when passing through the official [JSHint validator](https://jshint.com/)
+  - Some warnings were made, but most were regarding different versions of JavaScript
 
----
+![JavaScript Validation](assets/images-readme/JSValidation.png)
 
-Happy coding!
+<hr>
+
+- Python
+  - No errors were found when passing through the [JSHint validator](https://jshint.com/)
+
+![Python Validation](assets/images-readme/PythonValidation.png)
+
+<hr>
+
+<a id="manual-test"></a>
+### Manual Testing
+| Function | Expected Outcome | Does it work? |
+| ----------- | ----------- | ----------- |
+| General - Header | The header is displayed at the top of the page and sticks there. | Yes |
+| General - Logo Link | The logo and title direct the user to the homepage when clicked. | Yes |
+| General - NavBar | The NavBar links direct the user to the relevant pages when clicked. | Yes |
+| General - NavBar Login | The Login link opens a pop-up when clicked. | Yes |
+| General - Login | The Login pop-up allows the user to sign in or register. | Yes |
+| General - Login Validation | The Login pop-up validates user's input if they sign in. | Yes |
+| General - Login Registration Link | The Login pop-up redirects the user to the Registration page if the button is clicked. | Yes |
+| General - Account Dropdown | When logged in, an account dropdown menu will appear with borrowed and favourited books listed. | Yes |
+| General - Page Reset | The page reloads after logging out. | Yes |
+| General - Footer | The footer is displayed at the bottom of the page and shows social media links and a copyright. | Yes |
+| General - Footer Links | The social media links direct the user to the relevant websites when clicked. | Yes |
+| General - Footer Links New Page | The social media links open in new pages. | Yes |
+| General - Responsivity | The website is responsive and changes format depending on the device size. | Yes |
+| Homepage - Hero Section | The Jumbrotron is displayed with a background image, text overlay and Borrow and Favourite buttons. | Yes |
+| Homepage - Hero Section Buttons | The Borrow and Favourite buttons work as intended when clicked. | Yes |
+| Homepage - Info Cards | The cards are displayed side by side with book titles and images. | Yes |
+| Homepage - Info Cards Hover | The cards are expanded to show a short description and Borrow and Favourite buttons when hovered over. | Yes |
+| Registration - Display Fields | The relevant fields are all visible and can be interacted with. | Yes |
+| Registration - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Yes |
+| Registration - Submit Pop-Up | The button displays a pop-up when clicked to inform the user their details have been submitted. | Yes |
+| Enquiry - Display Fields | The relevant fields are all visible and can be interacted with. | Yes |
+| Enquiry - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Yes |
+| Enquiry - Submit Success | The page will show a success message to inform the user the query has been sent. | Yes |
+| Enquiry - Submit Email | The query is be sent to a dummy email after it is submitted. | Yes |
+| Enquiry - Form Reset | The form resets after returning from the submit page. | Yes |
+| Kids Page - Opens Short Story | The page opens a short story when the title is clicked. | Yes |
+| Kids Page - Page Buttons Work | The page turns to a new page when the relevant buttons are clicked. | Yes |
+| Kids Page - Read Aloud Button | The page reads the story aloud and stops playing when the relevant button is clicked. | Yes |
+
+<hr>
+
+<a id="auto-test"></a>
+### Automated Testing
+
+<hr>
+
+<a id="bugs"></a>
+### Known Bugs
+- 
+
+
+<a id="future-features"></a>
+## Future Features
+- 
+
+
+<a id="ai-implementation"></a>
+## AI Implementation
+
+<a id="ai-use"></a>
+### Use Cases & Reflections
+
+<a id="ai-code"></a>
+### Code Creation
+
+<a id="ai-debug"></a>
+### Debugging
+
+<a id="ai-optimization"></a>
+### Performance and UX Optimization
+
+<a id="ai-test"></a>
+### Automated Unit Testing
+
+<a id="ai-impact"></a>
+### Overall Impact
+
+
+
+<a id="tech-used"></a>
+## Technologies Used
+
+### Technologies & Languages
+
+- HTML5
+- CSS
+- JavaScript
+- Python
+- Git Version Control
+- GitHub
+- GitPod
+
+<hr>
+
+### Libraries & Frameworks
+
+- Bootstrap
+- Django
+- Google Fonts
+- Font Awesome
+
+<hr>
+
+### Tools & Programs
+
+- Balsamiq
+- Web3Forms
+- Microsoft Copilot
+
+<a id="deployment"></a>
+## Deployment
+
+### GitHub
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+The live link can be found here - [Inkspire, https://github.com/mitalic004/Inkspire](https://github.com/mitalic004/Inkspire)
+
+<hr>
+
+<a id="security"></a>
+### Security Measures
+
+<a id="credits"></a>
+## Credits
+
+### Code
+
+The project brief and primary learning and README.md template was supplied by [Code Institute](https://codeinstitute.net/).
+
+Supplementary learning resources which were referenced throughout the project are listed below:
+
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Web3Forms](https://docs.web3forms.com/)
+- [Microsoft Copilot](https://copilot.microsoft.com/)
+
+<hr>
+
+### Content 
+
+- The text and content included in the website was generated using Microsoft Copilot AI
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The fonts were taken from [Google Fonts](https://fonts.google.com/)
+- The colours were taken from [Coolors](https://coolors.co/)
+
+<hr>
+
+### Media
+
+- The images used for the website page are genereated using Microsoft Copilot AI
