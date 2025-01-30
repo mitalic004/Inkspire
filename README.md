@@ -49,6 +49,21 @@ The users can register an account and login to []
 
 <a id="user-stories"></a>
 ### User Stories
+- As a user I can view the landing page so that access the website.
+- As a user I can register an account and login to the site so that view posts.
+- As a user I can view a list of posts so that I can select which post I want to view.
+- As a user I can click on a post so that I can view the whole post.
+- As a user I can view comments on an individual post so that I can read opinions on the post.
+- As a user I can leave comments on a post so that I can share my opinion about the post.
+- As a user I can edit or delete my comments so that change my comments.
+- As an admin I can create, read, update and delete posts so that I can manage the content on the website.
+- As an admin I can create draft posts so that I can finish writing the content later.
+- As an admin I can delete any comments so that I can moderate the website.
+- As a user I can submit content so that it will be displayed on the website.
+- As a user I can like posts so that I can view them later.
+- As a user I can view an account page so that I can see my account details.
+- As a user I can search for post titles so that I can find specific posts.
+- As a user I can click the author name so that I can see other posts by the same author.
 
 <hr>
 
