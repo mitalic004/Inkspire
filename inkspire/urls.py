@@ -21,5 +21,5 @@ from writersarchive.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('writersarchive/', index, name='writersarchive'),
-    path('', index, name='writersarchive'),
+    #path('', index, name='writersarchive'),
 ]
