@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+POSTSTATUS = ((0, "Draft"), (1, "Published"))
+
 # Create your models here.
 class Story(models.Model):
     uid = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
@@ -10,4 +12,4 @@ class Story(models.Model):
     summary = models.CharField(max_length=200)
     content = models.TextField()
     dateposted = models.DateTimeField(auto_now_add=True)
-    #approved = models.IntegerField(choices=POSTSTATUS, default=0)
+    status = models.IntegerField(choices=POSTSTATUS, default=0)
