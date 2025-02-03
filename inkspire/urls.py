@@ -16,10 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from writersarchive.views import index
 
 urlpatterns = [
+    path('', include('writersarchive.urls'), name='writersarchive-urls'),
     path('admin/', admin.site.urls),
-    path('writersarchive/', index, name='writersarchive'),
-    #path('', index, name='writersarchive'),
 ]
