@@ -15,6 +15,12 @@ class Story(models.Model):
     posted_on = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=POSTSTATUS, default=0)
 
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"{self.title} | written by {self.author}"
+
 
 class Comment(models.Model):
     post = models.ForeignKey(Story, on_delete=models.CASCADE, related_name="comments")
@@ -23,3 +29,9 @@ class Comment(models.Model):
     comment_text = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.comment_text} by {self.author}"
