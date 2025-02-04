@@ -103,8 +103,8 @@ For the most part, the designs remained consistent with the implementation, but 
 
 The project used two sans-serif fonts which were implemented via [Google Fonts](https://fonts.google.com).
 
-- [Font1]() was used as the main logo and heading font to make it stand out and fit with the theme of the website.
-- [Font2]() was used for all the links and main content of the website to ensure easy readability.
+- [Overlock](https://fonts.google.com/specimen/Overlock) was used as the main logo and heading font to make it stand out and fit with the theme of the website.
+- [Lato](https://fonts.google.com/specimen/Lato) was used for all the links and main content of the website to ensure easy readability.
 
 <hr>
 
@@ -113,10 +113,14 @@ The project used two sans-serif fonts which were implemented via [Google Fonts](
 
 The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with. Some colours were not used in the final implementation, as they did not contrast enough to provide a suitable user experience.
 
-- `#606C38` used for: read aloud buttons
-- `#283618` used for: header & footer backgrounds, form & modal pop-up backgrounds, homepage headings & text, special buttons
-- `#FEFAE0` used for: form & modal pop-up text, button text, selected buttons
-- `#BC6C25` used for: buttons, selected button text, footer text & icon colour
+6A513B Coffee:		
+- `#01161E` (Rich Black) used for: header & footer backgrounds, main font
+- `#003052` (Prussian Blue) used for: main background, button background
+- `#A50021` (Madder) used for: hyperlinks
+- `#F1E9D2` (Parchment) used for: post background, header & footer font, homepage headings font, button text
+- `#DACDB2` (Dun) used for: comment reply background
+- `#C3B091` (Khaki) used for: comment background
+- `#4B3621` (Cafe Noir) used for: selected button
 
 ![Colour Palette](assets/images-readme/Colour-Palette.png)
 
