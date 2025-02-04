@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+/* CSS Styling */
+:root {
+    --heading-font: "Overlock", serif;
+    --text-font: "Lato", sans-serif;
+    --rich-black: #01161E;
+    --bg-blue: #01161E;
+    --link-red: #A50021;
+    --parchment: #F1E9D2;
+    --cmt-bg: #C3B091;
+    --cmt-rpl-bg: #DACDB2;
+    --bg-brown: #4B3621;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-blue);
+    color: var(--parchment);
+}
+
+/* Main Content */
+main {
+    align-items: center;
+    text-align: center;
+    /* Make main element take up surplus space to push footer down*/
+    flex: 1 0 auto;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: var(--rich-black);
+    color: var(--parchment);
+    font: var(--text-font);
+}
+
+.logo-title {
+    font: var(--heading-font);
+}
+
+/* Set colour of buttons */
+.btn {
+    background-color: var(--bg-brown);
+    color: var(--parchment);
+    border-color: var(--bg-brown);
+}
+
+/* Set colour of submit button when hovered over */
+.btn:hover {
+    background-color: var(--bg-blue);
+    color: var(--parchment);
+    border-color: var(--bg-blue);
+}
+
+/* Header & Footer Styling */
+.navbar-style, .footer-style {
+    background-color: var(--rich-black);
+    color: var(--parchment);
+    bottom: 0;
+}
+
+/* Stop ul adding space at bottom (Bootstrap default)*/
+ul {
+    margin-bottom: 0;
+}
+
+/* Footer Layout */
+#social-networks {
+    text-align: center;
+    padding: 20px 0 5px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    flex-grow: 1;
+    height: 100%;
+}
+
+/* Footer Icons */
+#social-networks i {
+    font-size: 160%;
+    color: var(--parchment);
+}
+
+/* Footer Copyright Layout */
+#copyright-info {
+    text-align: left;
+    list-style-type: none;
+    color: var(--parchment);
+}
+
+/* Footer Copyright Text */
+#copyright-info p {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    padding-left: 10px;
+}
