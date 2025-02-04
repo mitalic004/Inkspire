@@ -5,7 +5,7 @@
     --heading-font: "Overlock", serif;
     --text-font: "Lato", sans-serif;
     --rich-black: #01161E;
-    --bg-blue: #01161E;
+    --bg-blue: #003052;
     --link-red: #A50021;
     --parchment: #F1E9D2;
     --cmt-bg: #C3B091;
@@ -25,6 +25,7 @@ body {
 main {
     align-items: center;
     text-align: center;
+    background-color: var(--bg-blue);
     /* Make main element take up surplus space to push footer down*/
     flex: 1 0 auto;
 }
@@ -36,29 +37,40 @@ main {
     font: var(--text-font);
 }
 
-.logo-title {
-    font: var(--heading-font);
-}
-
-/* Set colour of buttons */
-.btn {
-    background-color: var(--bg-brown);
-    color: var(--parchment);
-    border-color: var(--bg-brown);
-}
-
-/* Set colour of submit button when hovered over */
-.btn:hover {
-    background-color: var(--bg-blue);
-    color: var(--parchment);
-    border-color: var(--bg-blue);
-}
-
 /* Header & Footer Styling */
 .navbar-style, .footer-style {
     background-color: var(--rich-black);
     color: var(--parchment);
     bottom: 0;
+}
+
+/* Unselected Navigation Links */
+.nav-link {
+    color: var(--parchment);
+}
+
+.nav-link:hover {
+    color: var(--parchment);
+    background-color: var(--bg-blue);
+}
+
+/* Selected Navigation Links */
+.active {
+    /* Prevent overwriting by Bootstrap active */
+    color: var(--parchment) !important;
+    background-color: var(--bg-blue);
+}
+
+/* Logo Style */
+.logo-title {
+    font: var(--heading-font);
+    color: var(--parchment);
+}
+
+/* Prevent Logo changing colour */
+.logo-title:hover {
+    font: var(--heading-font);
+    color: var(--parchment);
 }
 
 /* Stop ul adding space at bottom (Bootstrap default)*/
@@ -95,4 +107,18 @@ ul {
     font-family: var(--heading-font);
     font-size: 1.2rem;
     padding-left: 10px;
+}
+
+/* Set colour of buttons */
+.btn {
+    background-color: var(--bg-brown);
+    color: var(--parchment);
+    border-color: var(--bg-brown);
+}
+
+/* Set colour of submit button when hovered over */
+.btn:hover {
+    background-color: var(--bg-blue);
+    color: var(--parchment);
+    border-color: var(--bg-blue);
 }
