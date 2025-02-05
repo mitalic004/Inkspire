@@ -109,6 +109,52 @@ ul {
     padding-left: 10px;
 }
 
+/* Post Cards */
+.card {
+    border: none;
+    background-color: var(--parchment);
+}
+
+/* Post Author Styling */
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: var(--link-red);
+}
+
+.author {
+    color: var(--parchment);
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+/* Post Title */
+.post-link {
+    text-decoration: none;
+    color: var(--bg-blue);
+}
+
+.post-link:hover,
+.page-link {
+    color: var(--link-red);
+}
+
+.post-title {
+    margin-top: 10%;
+    margin-left: 5%;
+}
+
+.post-subtitle {
+    margin-left: 5%;
+    color: var(--rich-black);
+}
+
 /* Set colour of buttons */
 .btn {
     background-color: var(--bg-brown);
@@ -121,4 +167,37 @@ ul {
     background-color: var(--bg-blue);
     color: var(--parchment);
     border-color: var(--bg-blue);
+}
+
+/* Register & Post Edit Buttons */
+.btn-signup,
+.btn-edit {
+    background-color: var(--bg-brown);
+    color: var(--parchment);
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: var(--bg-blue);
+    color: var(--parchment);
+}
+
+/* Post Interaction Buttons */
+.btn-like {
+    color: var(--link-red);
+    border: none;
+    background: transparent;
+}
+
+.btn-delete {
+    color: var(--parchment);
+    background: var(--link-red);
+    background-color: var(--link-red);
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: var(--link-red);
+    background: transparent;
+    border: none;
 }
