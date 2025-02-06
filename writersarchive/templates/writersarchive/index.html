@@ -13,6 +13,7 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
+                            <!-- Author Display -->
                             <div class="image-container">
                                 <div class="image-flash">
                                     <p class="author">
@@ -21,6 +22,7 @@
                                 </div>
                             </div>
 
+                            <!-- Post Title -->
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">
                                     {{ post.title }}
@@ -29,6 +31,7 @@
 
                             <hr>
                             
+                            <!-- Date Posted -->
                             <p class="card-text text-muted h6">
                                 {{ post.posted_on }}
                             </p>

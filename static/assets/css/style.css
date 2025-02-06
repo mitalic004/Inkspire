@@ -26,6 +26,7 @@ main {
     align-items: center;
     text-align: center;
     background-color: var(--bg-blue);
+    font-family: var(--text-font);
     /* Make main element take up surplus space to push footer down*/
     flex: 1 0 auto;
 }
@@ -34,7 +35,7 @@ main {
 .navbar {
     background-color: var(--rich-black);
     color: var(--parchment);
-    font: var(--text-font);
+    font-family: var(--text-font);
 }
 
 /* Header & Footer Styling */
@@ -44,8 +45,20 @@ main {
     bottom: 0;
 }
 
+/* Logo Style */
+.logo-title {
+    font-family: var(--heading-font);
+    color: var(--parchment);
+}
+
+/* Prevent Logo changing colour */
+.logo-title:hover {
+    color: var(--parchment);
+}
+
 /* Unselected Navigation Links */
 .nav-link {
+    font-family: var(--text-font);
     color: var(--parchment);
 }
 
@@ -59,18 +72,6 @@ main {
     /* Prevent overwriting by Bootstrap active */
     color: var(--parchment) !important;
     background-color: var(--bg-blue);
-}
-
-/* Logo Style */
-.logo-title {
-    font: var(--heading-font);
-    color: var(--parchment);
-}
-
-/* Prevent Logo changing colour */
-.logo-title:hover {
-    font: var(--heading-font);
-    color: var(--parchment);
 }
 
 /* Stop ul adding space at bottom (Bootstrap default)*/
@@ -128,6 +129,12 @@ ul {
     background-color: var(--link-red);
 }
 
+/* Post Container */
+.card-body {
+    background: var(--parchment);
+    color: var(--rich-black);
+}
+
 .author {
     color: var(--parchment);
     margin: 4px;
@@ -138,6 +145,8 @@ ul {
     background: transparent;
     color: var(--rich-black);
 }
+
+
 
 /* Post Title */
 .post-link {
