@@ -5,46 +5,59 @@
 <!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
+        <!-- Hero Section -->
 
-        <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for post in story_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <!-- Author Display -->
-                            <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="author">
-                                        AUTHOR: {{ post.author }}
-                                    </p>
+        <!-- Check if Logged In -->
+        <div>
+            {% if user.is_authenticated %}
+            <!-- Blog Entries Column -->
+            <div class="col-12 mt-3 left">
+                <div class="row">
+                    {% for post in story_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <!-- Author Display -->
+                                <div class="image-container">
+                                    <div class="image-flash">
+                                        <p class="author">
+                                            AUTHOR: {{ post.author }}
+                                        </p>
+                                    </div>
                                 </div>
+
+                                <!-- Post Title -->
+                                <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                                    <h2 class="card-title">
+                                        {{ post.title }}
+                                    </h2>
+                                </a>
+
+                                <hr>
+
+                                <!-- Date Posted -->
+                                <p class="card-text text-muted h6">
+                                    {{ post.posted_on }}
+                                </p>
                             </div>
-
-                            <!-- Post Title -->
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">
-                                    {{ post.title }}
-                                </h2>
-                            </a>
-
-                            <hr>
-                            
-                            <!-- Date Posted -->
-                            <p class="card-text text-muted h6">
-                                {{ post.posted_on }}
-                            </p>
                         </div>
                     </div>
+                    {% if forloop.counter|divisibleby:3 %}
                 </div>
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
 
-            <div class="row">
-                {% endif %}
-                {% endfor %}
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
+            {% else %}
+            <h5>
+                You are not <b>logged in</b>.
+                <br>
+                Please <a class="link" href="{{ login_url }}">log in</a> or <a class="link"
+                    href="{{ signup_url }}">register</a> to view posts.
+            </h5>
+            {% endif %}
         </div>
     </div>
 

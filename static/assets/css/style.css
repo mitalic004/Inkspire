@@ -232,3 +232,8 @@ ul {
     background: transparent;
     border: none;
 }
+
+/* Set text to be left aligned */
+.text-left-align {
+    text-align: left;
+}
