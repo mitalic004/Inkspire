@@ -34,6 +34,8 @@ main {
     font-family: var(--text-font);
     /* Make main element take up surplus space to push footer down*/
     flex: 1 0 auto;
+    /* Add space between main and footer */
+    padding-bottom: 1.5rem;
 }
 
 /* Navigation Bar Styles */
@@ -44,7 +46,8 @@ main {
 }
 
 /* Header & Footer Styling */
-.navbar-style, .footer-style {
+.navbar-style,
+.footer-style {
     background-color: var(--rich-black);
     color: var(--parchment);
     bottom: 0;
@@ -161,8 +164,6 @@ ul {
     background: transparent;
     color: var(--rich-black);
 }
-
-
 
 /* Post Title */
 .post-link {
