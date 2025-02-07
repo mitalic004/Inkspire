@@ -17,6 +17,11 @@
 body {
     margin: 0;
     padding: 0;
+    /* Ensure body content takes up whole screen height */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Set general website colours */
     background-color: var(--bg-blue);
     color: var(--parchment);
 }
@@ -43,6 +48,17 @@ main {
     background-color: var(--rich-black);
     color: var(--parchment);
     bottom: 0;
+}
+
+/* Centers Logo in Navbar */
+.navbar h4 {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+/* Make Toggler more visible */
+.navbar-toggler {
+    background-color: var(--bg-blue);
 }
 
 /* Logo Style */
