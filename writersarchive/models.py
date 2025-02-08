@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 POSTSTATUS = ((0, "Draft"), (1, "Published"))
 RATING = ((0, "Not Rated"), (1, "★"), (2, "★★"), (3, "★★★"), (4, "★★★★"), (5, "★★★★★"))
+GENRE = ((0, "Action & Adventure"), (1, "Comedy"), (2, "Contemporary"), (3, "Fantasy"), (4, "Historical"), (5, "Horror"), (6, "Mystery"), (7, "Romance"), (8, "Science Fiction"))
 
 # Create your models here.
 class Story(models.Model):
@@ -12,7 +13,7 @@ class Story(models.Model):
     summary = models.TextField(max_length=500)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    posted_on = models.DateTimeField(auto_now=True)
+    genre = models.IntegerField(choices=RATING, default=2)
     status = models.IntegerField(choices=POSTSTATUS, default=0)
 
     class Meta:
