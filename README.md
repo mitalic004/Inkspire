@@ -337,7 +337,7 @@ Supplementary learning resources which were referenced throughout the project ar
 
 ### Content 
 
-- The text and content included in the website was generated using Microsoft Copilot AI
+- The text, some images and content included in the website was generated using Microsoft Copilot AI
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 - The fonts were taken from [Google Fonts](https://fonts.google.com/)
 - The colours were taken from [Coolors](https://coolors.co/)
@@ -346,4 +346,7 @@ Supplementary learning resources which were referenced throughout the project ar
 
 ### Media
 
-- The images used for the website page are genereated using Microsoft Copilot AI
+- The story cover images were taken from sources on [Pixabay](https://pixabay.com/):
+  - [betidraws](https://pixabay.com/users/23986844/)
+  - [camiladenleschi](https://pixabay.com/users/camiladenleschi-1542038/)
+- Some images used for the website page are genereated using Microsoft Copilot AI
