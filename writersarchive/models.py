@@ -13,7 +13,7 @@ class Story(models.Model):
     summary = models.TextField(max_length=500)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    genre = models.IntegerField(choices=RATING, default=2)
+    genre = models.IntegerField(choices=GENRE, default=2)
     status = models.IntegerField(choices=POSTSTATUS, default=0)
 
     class Meta:
