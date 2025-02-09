@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'django_summernote',
     'writersarchive',
-    'storysubmission',
 ]
 
 SITE_ID = 1

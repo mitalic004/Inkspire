@@ -200,6 +200,19 @@ ul {
     border-color: var(--bg-blue);
 }
 
+/* Register & Post Edit Buttons */
+.btn-signup,
+.btn-edit {
+    background-color: var(--bg-brown);
+    color: var(--parchment);
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: var(--bg-blue);
+    color: var(--parchment);
+}
+
 /* Post Interaction Buttons */
 .btn-like {
     color: var(--link-red);
