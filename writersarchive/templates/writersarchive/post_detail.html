@@ -63,12 +63,16 @@
                         </span> wrote:
                     </p>
                     <div id="comment{{ comment.id }}">
-                        {{ comment.comment_text | linebreaks }}
+                        {{ comment.body | linebreaks }}
                     </div>
                     {% if not comment.approved and comment.author == user %}
                     <p class="approval">
-                        This comment is awaiting approval
+                        This comment is awaiting approval.
                     </p>
+                    {% endif %}
+                    <!-- Edit Comment -->
+                    {% if user.is_authenticated and comment.author == user %}
+                    <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
@@ -88,7 +92,7 @@
                     <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
                 {% else %}
-                <p>Log in to leave a comment</p>
+                <p>Log in to leave a comment.</p>
                 {% endif %}
             </div>
         </div>
@@ -96,3 +100,7 @@
 </div>
 
 {% endblock content %}
+
+{% block extras %}
+<script src="{% static 'assets/js/comments.js' %}"></script>
+{% endblock %}

@@ -27,7 +27,7 @@ class Comment(models.Model):
     post = models.ForeignKey(Story, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
     rating = models.IntegerField(choices=RATING, default=0)
-    comment_text = models.TextField()
+    body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
@@ -35,4 +35,4 @@ class Comment(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Comment {self.comment_text} by {self.author}"
+        return f"Comment {self.body} by {self.author}"
