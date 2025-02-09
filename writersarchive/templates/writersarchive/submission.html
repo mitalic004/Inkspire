@@ -12,12 +12,12 @@
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col-12 col-md-6 my-5">
-            <div class="card-body">
+        <div class="col-12 col-md-8 my-5">
+            <div class="card card-body">
                 {% if user.is_authenticated %}
                 <h3>Submit your own stories and have them posted on our page!</h3>
                 <p>Submitting as: {{ user.username }}</p>
-                <form id="submitForm" method="post" style="margin-top: 1.3em;">
+                <form id="submitForm" method="post" class="text-left-align" style="margin-top: 1.3em;">
                     {{ submission_form | crispy }}
                     {% csrf_token %}
                     <button id="submitButton" type="submit" class="btn btn-lg">Submit</button>

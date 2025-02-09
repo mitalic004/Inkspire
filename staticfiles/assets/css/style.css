@@ -247,11 +247,6 @@ ul {
     border: none;
 }
 
-/* Set text to be left aligned */
-.text-left-align {
-    text-align: left;
-}
-
 .alert {
     color: var(--rich-black);
     background-color: var(--cmt-bg);
@@ -261,4 +256,9 @@ ul {
 .modal-content {
     background-color: var(--rich-black);
     color: var(--parchment);
+}
+
+/* Set text to be left aligned */
+.text-left-align {
+    text-align: left;
 }
