@@ -17,7 +17,7 @@
                 {% if user.is_authenticated %}
                 <h3>Submit your own stories and have them posted on our page!</h3>
                 <p>Submitting as: {{ user.username }}</p>
-                <form id="submitForm" method="post" style="margin-top: 1.3em;">
+                <form id="commentForm" method="post" style="margin-top: 1.3em;">
                     {{ submission_form | crispy }}
                     {% csrf_token %}
                     <button id="submitButton" type="submit" class="btn btn-lg">Submit</button>
