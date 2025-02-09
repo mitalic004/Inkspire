@@ -150,8 +150,29 @@ ul {
 
 /* Post Container */
 .card-body {
-    background: var(--parchment);
+    background-color: var(--parchment);
     color: var(--rich-black);
+}
+
+.comment-area {
+    background-color: var(--bg-blue);
+    border: transparent;
+    color: var(--parchment);
+    text-align: left;
+}
+
+.comment-area hr {
+    background-color: var(--rich-black);
+    color: var(--rich-black);
+    border-color: var(--rich-black);
+}
+
+.comment {
+    background-color: var(--cmt-bg);
+}
+
+.comment-reply {
+    background-color: var(--cmt-rpl-bg);
 }
 
 .author {
@@ -194,23 +215,22 @@ ul {
 }
 
 /* Set colour of submit button when hovered over */
-.btn:hover {
+.btn:hover,
+.btn:active {
     background-color: var(--bg-blue);
     color: var(--parchment);
     border-color: var(--bg-blue);
 }
 
-/* Register & Post Edit Buttons */
-.btn-signup,
-.btn-edit {
-    background-color: var(--bg-brown);
+.btn-danger {
     color: var(--parchment);
+    background-color: var(--link-red);
 }
 
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: var(--bg-blue);
+.btn-delete:hover,
+.btn-delete:active {
     color: var(--parchment);
+    background-color: var(--link-red);
 }
 
 /* Post Interaction Buttons */
@@ -218,12 +238,6 @@ ul {
     color: var(--link-red);
     border: none;
     background: transparent;
-}
-
-.btn-delete {
-    color: var(--parchment);
-    background: var(--link-red);
-    background-color: var(--link-red);
 }
 
 .btn-like:hover,
@@ -236,4 +250,15 @@ ul {
 /* Set text to be left aligned */
 .text-left-align {
     text-align: left;
+}
+
+.alert {
+    color: var(--rich-black);
+    background-color: var(--cmt-bg);
+    text-align: center;
+}
+
+.modal-content {
+    background-color: var(--rich-black);
+    color: var(--parchment);
 }

@@ -11,6 +11,7 @@ class StoryList(generic.ListView):
     template_name = "writersarchive/index.html"
     paginate_by = 6
 
+# Display Post
 def post_detail(request, slug):
     """
     Display an individual :model:`writersarchive.Story`.
@@ -56,6 +57,7 @@ def post_detail(request, slug):
         },
     )
 
+# Edit Comment
 def comment_edit(request, slug, comment_id):
     """
     view to edit comments
@@ -78,6 +80,24 @@ def comment_edit(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+# Delete Comment
+def comment_delete(request, slug, comment_id):
+    """
+    view to delete comment
+    """
+    queryset = Story.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+    else:
+        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+
+    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+# Submission Page
 def submission_page(request):
     """
     Renders the Submission page
