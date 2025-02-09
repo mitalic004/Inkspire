@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.contrib import messages
 from .models import Story
-from .forms import CommentForm
+from .forms import CommentForm, SubmissionForm
 
 # Create your views here.
 class StoryList(generic.ListView):
@@ -52,5 +52,19 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+        },
+    )
+
+def submission_page(request):
+    """
+    Renders the Submission page
+    """
+    submission_form = SubmissionForm()
+
+    return render(
+        request,
+        "writersarchive/submission.html",
+        {
+            "submission_form": submission_form
         },
     )
