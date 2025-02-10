@@ -1,25 +1,34 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
 
 <!-- index.html content starts here -->
 <div class="container-fluid">
     <div class="row">
         <!-- Hero Section -->
+        <header class="hero">
+            <div class="container" id="overlay">
+                <h1 class="display-2">Welcome to Inkspire!</h1>
+                <h3>Unleash Your Imagination: Read, Write, and Discover Stories That Inspire.</h3>
+            </div>
+        </header>
 
         <!-- Check if Logged In -->
         <div>
             {% if user.is_authenticated %}
             <!-- Blog Entries Column -->
             <div class="col-12 mt-3 left">
-                <div class="row">
+                <div class="row posts-row">
                     {% for post in story_list %}
                     <div class="col-md-4">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <!-- Author Display -->
                                 <div class="image-container">
-                                    
+                                    <!-- {% block loadimg %}
+                                    {% endblock %} -->
                                     <div class="image-flash">
                                         <p class="author">
                                             AUTHOR: {{ post.author }}
