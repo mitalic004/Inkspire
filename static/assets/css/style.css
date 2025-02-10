@@ -313,6 +313,11 @@ ul {
     padding-top: 1rem;
 }
 
+/* Add padding to the right of an element */
+.padding-top {
+    padding-right: 1rem;
+}
+
 .post-cover-image {
     max-width: inherit;
     padding-top: 1rem;
