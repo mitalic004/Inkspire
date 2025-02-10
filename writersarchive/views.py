@@ -1,10 +1,10 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .models import Story, Comment
 from .forms import CommentForm, SubmissionForm
-from slugify import slugify
 
 # Create your views here.
 class StoryList(generic.ListView):
@@ -13,6 +13,7 @@ class StoryList(generic.ListView):
     paginate_by = 6
 
 # Display Post
+@login_required
 def post_detail(request, slug):
     """
     Display an individual :model:`writersarchive.Story`.
@@ -40,10 +41,7 @@ def post_detail(request, slug):
             comment.author = request.user
             comment.post = post
             comment.save()
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Comment submitted and awaiting approval.'
-            )
+            messages.add_message(request, messages.SUCCESS, 'Comment submitted and awaiting approval.')
 
     comment_form = CommentForm()
 
@@ -61,7 +59,7 @@ def post_detail(request, slug):
 # Edit Comment
 def comment_edit(request, slug, comment_id):
     """
-    view to edit comments
+    View to edit comments
     """
     if request.method == "POST":
 
@@ -84,7 +82,7 @@ def comment_edit(request, slug, comment_id):
 # Delete Comment
 def comment_delete(request, slug, comment_id):
     """
-    view to delete comment
+    View to delete comment
     """
     queryset = Story.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
@@ -99,49 +97,25 @@ def comment_delete(request, slug, comment_id):
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 # Submission Page
+@login_required
 def submission_page(request):
     """
     Renders the Submission page
     """
-    submission_form = SubmissionForm()
-
-    return render(
-        request,
-        "writersarchive/submission.html",
-        {
-            "submission_form": submission_form
-        },
-    )
-
-    queryset = Story.objects
-
     if request.method == "POST":
-        submission_form = SubmissionForm(data=request.POST)
+        submission_form = SubmissionForm(request.POST)
         if submission_form.is_valid():
-            post = submission_form.save(commit=False)
-            post.author = request.user
-            post.status = 0
-            post.save()
-            
-            # # Create post slug
-            # testslug = slugify(post.author) + slugify(post.title)
-            # if testslug in queryset:
-            #     slugnotunique = True
-            #     i = 0
-            #     while slugnotunique:
-            #         tempslug = testslug
-            #         tempslug += str(i)
-            #         if tempslug in queryset:
-            #             i += 1
-            #         else:
-            #             slugnotunique = False
-            #             post.slug = tempslug
-            #             break
-            # else:
-            #     post.slug = tempslug
-                    
-
-            messages.add_message(
-                request, messages.SUCCESS,
-                'Story submitted and awaiting approval.'
+            submission = submission_form.save(commit=False)
+            submission.author = request.user
+            submission.status = 0
+            submission.save()
+            # Successful Submission Message
+            messages.add_message(request, messages.SUCCESS, 'Story submitted and awaiting approval.'
             )
+            return redirect("writersarchive/submission.html")
+        else:
+            messages.add_message(request, messages.ERROR, 'Error submitting story!')
+    else:
+        submission_form = SubmissionForm()
+
+    return render(request, "writersarchive/submission.html", {"submission_form": submission_form})
