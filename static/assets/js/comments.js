@@ -44,11 +44,3 @@ for (let button of deleteButtons) {
         deleteModal.show();
     });
 }
-
-/**
- * Changes the background of comments left by the author of the post for better visibility
- */
-function authorCommentBG() {
-  var element = document.getElementById("commentsBody");
-  element.classList.add("comment-op");
-} 
