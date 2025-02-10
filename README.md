@@ -60,10 +60,6 @@ The users can register an account and login to []
 - As an admin I can create draft posts so that I can finish writing the content later.
 - As an admin I can delete any comments so that I can moderate the website.
 - As a user I can submit content so that it will be displayed on the website.
-- As a user I can like posts so that I can view them later.
-- As a user I can view an account page so that I can see my account details.
-- As a user I can search for post titles so that I can find specific posts.
-- As a user I can click the author name so that I can see other posts by the same author.
 
 <hr>
 
@@ -248,7 +244,11 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
 
 <a id="future-features"></a>
 ## Future Features
-- 
+
+- As a user I can like posts so that I can view them later.
+- As a user I can view an account page so that I can see my account details.
+- As a user I can search for post titles so that I can find specific posts.
+- As a user I can click the author name so that I can see other posts by the same author.
 
 
 <a id="ai-implementation"></a>
@@ -285,7 +285,6 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
 - Python
 - Git Version Control
 - GitHub
-- GitPod
 
 <hr>
 
@@ -301,6 +300,7 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
 ### Tools & Programs
 
 - Balsamiq
+- LucidCharts
 - Web3Forms
 - Microsoft Copilot
 
@@ -329,6 +329,7 @@ The project brief and primary learning and README.md template was supplied by [C
 
 Supplementary learning resources which were referenced throughout the project are listed below:
 
+- I Think Therefore I Blog Walkthrough Project by Code Institute
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - [Web3Forms](https://docs.web3forms.com/)
 - [Microsoft Copilot](https://copilot.microsoft.com/)
@@ -347,6 +348,7 @@ Supplementary learning resources which were referenced throughout the project ar
 ### Media
 
 - The story cover images were taken from sources on [Pixabay](https://pixabay.com/):
+  - [CDD20](https://pixabay.com/users/cdd20-1193381/)
   - [betidraws](https://pixabay.com/users/23986844/)
   - [camiladenleschi](https://pixabay.com/users/camiladenleschi-1542038/)
 - Some images used for the website page are genereated using Microsoft Copilot AI
