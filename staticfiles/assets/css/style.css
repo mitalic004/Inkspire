@@ -8,8 +8,8 @@
     --bg-blue: #003052;
     --link-red: #A50021;
     --parchment: #F1E9D2;
-    --cmt-bg: #C3B091;
-    --cmt-op-bg: #DACDB2;
+    --cmt-op-bg: #C3B091;
+    --cmt-bg: #DACDB2;
     --bg-brown: #4B3621;
 }
 
@@ -194,8 +194,10 @@ ul {
     border-color: var(--rich-black);
 }
 
-.comment {
+.comments {
     background-color: var(--cmt-bg);
+    border-radius: var(--bs-border-radius);
+    margin-bottom: 2rem;
 }
 
 .comment-op {
@@ -231,7 +233,7 @@ ul {
 
 .post-subtitle {
     margin-left: 5%;
-    color: var(--rich-black);
+    color: var(--cmt-bg);
 }
 
 .posts-row {
@@ -254,9 +256,9 @@ ul {
 }
 
 .btn-nav {
-    background-color: var(--cmt-op-bg);
+    background-color: var(--cmt-bg);
     color: var(--rich-black);
-    border-color: var(--cmt-op-bg);
+    border-color: var(--cmt-bg);
 }
 
 .btn-nav:hover {
