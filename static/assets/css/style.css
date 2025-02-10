@@ -9,7 +9,7 @@
     --link-red: #A50021;
     --parchment: #F1E9D2;
     --cmt-bg: #C3B091;
-    --cmt-rpl-bg: #DACDB2;
+    --cmt-op-bg: #DACDB2;
     --bg-brown: #4B3621;
 }
 
@@ -198,8 +198,8 @@ ul {
     background-color: var(--cmt-bg);
 }
 
-.comment-reply {
-    background-color: var(--cmt-rpl-bg);
+.comment-op {
+    background-color: var(--cmt-op-bg);
 }
 
 .author {
@@ -251,6 +251,18 @@ ul {
     background-color: var(--bg-blue);
     color: var(--parchment);
     border-color: var(--bg-blue);
+}
+
+.btn-nav {
+    background-color: var(--cmt-op-bg);
+    color: var(--rich-black);
+    border-color: var(--cmt-op-bg);
+}
+
+.btn-nav:hover {
+    background-color: var(--rich-black);
+    color: var(--parchment);
+    border-color: var(--rich-black);
 }
 
 .btn-danger {

@@ -8,7 +8,7 @@ from .forms import CommentForm, SubmissionForm
 
 # Create your views here.
 class StoryList(generic.ListView):
-    queryset = Story.objects.all()
+    queryset = Story.objects.filter(status=1)
     template_name = "writersarchive/index.html"
     paginate_by = 6
 
