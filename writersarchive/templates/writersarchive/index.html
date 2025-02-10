@@ -26,10 +26,12 @@
                     <div class="col-md-4">
                         <div class="card mb-4">
                             <div class="card-body">
-                                <!-- Author Display -->
+                                <!-- Post Header -->
                                 <div class="image-container">
-                                    <!-- {% block loadimg %}
-                                    {% endblock %} -->
+                                    <!-- Displays Cover Image for Posts -->
+                                    <img class="card-img-top" src=" {{ post.cover_img.url }}" alt="{{ post.title }}">
+
+                                    <!-- Author Display -->
                                     <div class="image-flash">
                                         <p class="author">
                                             AUTHOR: {{ post.author }}
