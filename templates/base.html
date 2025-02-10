@@ -68,8 +68,8 @@
                         {% if user.is_authenticated %}
                         <!-- Submission From Link -->
                         <li class="nav-item">
-                            <a class="nav-link {% if request.path == submission_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'submission' %}">Submit a Story</a>
+                            <a class="nav-link {% if request.path == submission_url %}active{% endif %}"
+                                aria-current="page" href="{% url 'submission' %}">Submit a Story</a>
                         </li>
 
                         <li class="nav-item">
@@ -175,6 +175,10 @@
     <!-- Comments JS Script -->
     {% block extras %}
     {% endblock %}
+
+    <!-- Loading Images based on Genre -->
+    <!-- {% block loadimg %}
+    {% endblock %} -->
 </body>
 
 </html>

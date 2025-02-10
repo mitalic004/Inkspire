@@ -123,22 +123,22 @@ def submission_page(request):
             post.status = 0
             post.save()
             
-            # Create post slug
-            testslug = slugify(post.author) + slugify(post.title)
-            if testslug in queryset:
-                slugnotunique = True
-                i = 0
-                while slugnotunique:
-                    tempslug = testslug
-                    tempslug += str(i)
-                    if tempslug in queryset:
-                        i += 1
-                    else:
-                        slugnotunique = False
-                        post.slug = tempslug
-                        break
-            else:
-                post.slug = tempslug
+            # # Create post slug
+            # testslug = slugify(post.author) + slugify(post.title)
+            # if testslug in queryset:
+            #     slugnotunique = True
+            #     i = 0
+            #     while slugnotunique:
+            #         tempslug = testslug
+            #         tempslug += str(i)
+            #         if tempslug in queryset:
+            #             i += 1
+            #         else:
+            #             slugnotunique = False
+            #             post.slug = tempslug
+            #             break
+            # else:
+            #     post.slug = tempslug
                     
 
             messages.add_message(
