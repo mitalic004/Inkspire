@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Story
-from .models import Comment
+from .models import Story, Comment, GenreCoverImage
 from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Story)
@@ -13,3 +12,6 @@ class PostAdmin(SummernoteModelAdmin):
 
 # Comments
 admin.site.register(Comment)
+
+# Genre
+admin.site.register(GenreCoverImage)

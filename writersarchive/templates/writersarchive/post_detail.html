@@ -13,9 +13,12 @@
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post Author & Date Created -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                <!-- Post Summary -->
+                <p class="text-left-align padding-top">{{ post.summary }}</p>
             </div>
+            <!-- Post Genre Cover Image -->
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'assets/images/default.jpg' %}" class="scale" alt="Post Header Image">
+                <img src="{{ post.genre.cover_img.url }}" class="scale post-cover-image" alt="Post Header Image">
             </div>
         </div>
     </div>
