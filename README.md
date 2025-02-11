@@ -23,6 +23,7 @@ The users can register an account and login to browse through published stories 
   - [Topography](#topography)
   - [Colour Scheme](#colour-scheme)
 - [Features](#features)
+- [Database](#database)
 - [Agile](#agile)
 - [Testing](#testing)
   - [Verification & Validation](#valid-test)
@@ -34,7 +35,7 @@ The users can register an account and login to browse through published stories 
   - [Use Cases & Reflections](#ai-use)
   - [Code Creation](#ai-code)
   - [Debugging](#ai-debug)
-  - [Performance and UX Optimization](#ai-optimization)
+  - [Asset Generation](#ai-assets)
   - [Automated Unit Testing](#ai-test)
   - [Overall Impact](#ai-impact)
 - [Technology Used](#tech-used)
@@ -284,6 +285,20 @@ The website was creating using Django and included several templates which exten
 ![Footer]()
 
 
+<a id="database"></a>
+## Database
+
+Code Institute's PostgreSQL database was used for this project.
+
+### Entity Relationship Diagrams
+
+ERDs for the database models were created prior to the start of the project and were used to inform it's development and structure.
+The User model was built using the Django Allauth Library.
+
+![Main Models](static/assets/images-readme/Inkspire_ERD.png)
+![Submission Model](static/assets/images-readme/Inkspire_StorySubmission_ERD.png)
+
+
 <a id="agile"></a>
 ## Agile
 
@@ -415,44 +430,68 @@ Manual testing was carried out throughout the development of the project.
 | General - Header | The header is displayed at the top of the page and sticks there. | Pass |
 | General - Logo Link | The logo and title direct the user to the homepage when clicked. | Pass |
 | General - NavBar | The NavBar links direct the user to the relevant pages when clicked. | Pass |
-| General - NavBar Login | The Login link opens a pop-up when clicked. | Pass |
-| General - Login | The Login pop-up allows the user to sign in or register. | Pass |
-| General - Login Validation | The Login pop-up validates user's input if they sign in. | Pass |
-| General - Login Registration Link | The Login pop-up redirects the user to the Registration page if the button is clicked. | Pass |
-| General - Account Dropdown | When logged in, an account dropdown menu will appear with borrowed and favourited books listed. | Pass |
+| General - NavBar Change Links | The NavBar links change depending on whether the user is logged in or not. | Pass |
+| General - NavBar Registration | The Registration link opens the Registration page when clicked. | Pass |
+| General - NavBar Login | The Login link opens the log in page when clicked. | Pass |
+| General - Login Page | The Login page allows the user to sign in. | Pass |
+| General - Login Page Authentication | The Login page validates and authenticates the user's details. | Pass |
+| General - Login Page Registration Link | The Login page redirects to the Registration page when clicked. | Pass |
+| General - Login Confirmation | The page will show a success message to inform the user after successfully logging in. | Pass |
+| General - Registration Page | The Registration page allows the user to sign in. | Pass |
+| General - Registration Page Authentication | The Registration page validates and authenticates the user's details. | Pass |
+| General - Registration Page Registration Link | The Registration page redirects to the Login page when clicked. | Pass |
+| General - Registration Confirmation | The page will show a success message to inform the user after successfully registering. | Pass |
+| General - Logout Confirmation | The logout confirmation page is shown when logging out. | Pass |
+| General - Logout Confirmation | The page will show a success message to inform the user after successfully logging out. | Pass |
 | General - Page Reset | The page reloads after logging out. | Pass |
 | General - Footer | The footer is displayed at the bottom of the page and shows social media links and a copyright. | Pass |
 | General - Footer Links | The social media links direct the user to the relevant websites when clicked. | Pass |
 | General - Footer Links New Page | The social media links open in new pages. | Pass |
 | General - Responsivity | The website is responsive and changes format depending on the device size. | Pass |
-| Homepage - Hero Section | The Jumbrotron is displayed with a background image, text overlay and Borrow and Favourite buttons. | Pass |
-| Homepage - Hero Section Buttons | The Borrow and Favourite buttons work as intended when clicked. | Pass |
-| Homepage - Info Cards | The cards are displayed side by side with book titles and images. | Pass |
-| Homepage - Info Cards Hover | The cards are expanded to show a short description and Borrow and Favourite buttons when hovered over. | Pass |
-| Registration - Display Fields | The relevant fields are all visible and can be interacted with. | Pass |
-| Registration - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Pass |
-| Registration - Submit Pop-Up | The button displays a pop-up when clicked to inform the user their details have been submitted. | Pass |
-| Enquiry - Display Fields | The relevant fields are all visible and can be interacted with. | Pass |
-| Enquiry - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Pass |
-| Enquiry - Submit Success | The page will show a success message to inform the user the query has been sent. | Pass |
-| Enquiry - Submit Email | The query is be sent to a dummy email after it is submitted. | Pass |
-| Enquiry - Form Reset | The form resets after returning from the submit page. | Pass |
-| Kids Page - Opens Short Story | The page opens a short story when the title is clicked. | Pass |
-| Kids Page - Page Buttons Work | The page turns to a new page when the relevant buttons are clicked. | Pass |
-| Kids Page - Read Aloud Button | The page reads the story aloud and stops playing when the relevant button is clicked. | Pass |
+| Homepage - Hero Section | The hero section is displayed with a background image, text overlay. | Pass |
+| Homepage - User Authentication | The homepage doesn't show any posts when user is not logged in. | Pass |
+| Homepage - Login Prompt | The homepage displays a registration/login prompt when user is not logged in. | Pass |
+| Homepage - Post List | The posts are displayed in a list view when user is logged in. | Pass |
+| Homepage - Post List Navigation | There is are navigation links allowing you to go through the list of posts at the bottom of the page. | Pass |
+| Homepage - Posts | The posts are displayed with all relevant information and a header image. | Pass |
+| Homepage - Post List Links | The posts will redirect to a page showing post details when clicked. | Pass |
+| PostDetails - Posts | The posts are displayed with all relevant information and a header section. | Pass |
+| PostDetails - Posts Header | The header section contains all relevant information and a image based on the genre. | Pass |
+| PostDetails - Comments Section | The comments section is displayed under the post. | Pass |
+| PostDetails - Comments Approved | The comments section will only display approved comments. | Pass |
+| PostDetails - Add Comments | Users can submit comments using the comment box form. | Pass |
+| PostDetails - Input Validation | The input boxes validates the user's input to ensure data is in the correct format. | Pass |
+| PostDetails - Edit Comments | Users can edit their own comments using the comment box form. | Pass |
+| PostDetails - Delete Comments | Users can delete their own comments. | Pass |
+| PostDetails - Delete Comments Confirmation | The page will show a confirmation message to check the user wants to delete their comment. | Pass |
+| PostDetails - Interact Only With Own Comments | The page will not allow users to edit or delete other's comments and will show a warning message if attempted. | Pass |
+| SubmissionForm - Input Validation | The input boxes validates the user's input to ensure data is in the correct format. | Pass |
+| SubmissionForm - Submit Confirmation | The page will show a success message to inform the user the submission has been sent. | Pass |
+| SubmissionForm - Form Reset | The form resets after the submission has been sent. | Pass |
+| Admin - Admin Panel | Admin users can access a separate admin panel to moderate users, stories and comments. | Pass |
+| Admin - Draft Posts | Admin users can create drafts of stories. | Pass |
+| Admin - Publish Posts | Admin users can publish stories. | Pass |
+| Admin - Submissions | The submissions are added to the Story model and are visible to admins. | Pass |
+| Admin - Editing Posts | Admin users can edit stories. | Pass |
+| Admin - Delete Posts | Admin users can delete stories. | Pass |
+| Admin - Create Comments | Admin users can create comments. | Pass |
+| Admin - Approve Comments | Admin users can approve comments. | Pass |
+| Admin - Editing Comments | Admin users can edit comments. | Pass |
+| Admin - Delete Comments | Admin users can delete comments. | Pass |
+| Admin - Manage Users | Admin users can manage other user accounts and grant them access as admins. | Pass |
 
 <hr>
 
 <a id="auto-test"></a>
 ### Automated Testing
 
-Automated tests were created to test the function of 
+Automated tests were created to test the function of the comments submission form and ensure empty values couldn't be passed through. These tests were created with the help of Microsoft Copilot AI.
 
 <hr>
 
 <a id="bugs"></a>
 ### Known Bugs
-- 
+- There are no known bugs in this project.
 
 
 <a id="future-features"></a>
@@ -471,21 +510,42 @@ Automated tests were created to test the function of
 <a id="ai-use"></a>
 ### Use Cases & Reflections
 
+AI was used a supplementary tool throughout the project and help streamline some of the process and issues which were encountered. The main AI used was Microsoft Copilot AI.
+
 <a id="ai-code"></a>
 ### Code Creation
+
+AI was used to create some sections of HTML code, such as the hero section on the landing page. It served as a good starting point to provide the basic structure of elements so they could be further customised later.
 
 <a id="ai-debug"></a>
 ### Debugging
 
-<a id="ai-optimization"></a>
-### Performance and UX Optimization
+I did attempt to use AI for assistance with debugged at various stages throughout the development of the project, but it was often ineffective and I found it more practical to search online for similar issues and aplly the solutions to my own work
+
+<a id="ai-assets"></a>
+### Asset Generation
+
+I mostly used AI to generate assets for the site, such as some of the header images. As time was resticted for this project, it was more practical to use AI generated assets instead of manually searching for suitable images. The post contents (summaries and content) were also generated using AI to populate the database and site to better test what the final site would look like with actual content instead of test posts.
 
 <a id="ai-test"></a>
 ### Automated Unit Testing
 
+AI was used to create automated tests for the comment form to ensure the form would only pass if all data was valid. It provided a good base but required some further tweaking before the unit was fully operational.
+
 <a id="ai-impact"></a>
 ### Overall Impact
 
+Overall, AI was a useful tool which helped streamline some aspects of the development process. It cannot be fully relied on for all aspects but using it in conjunction with other tools greatly assisted me in completing this project.
+
+
+<a id="security"></a>
+## Security Measures
+
+Several security measures were taken to ensure user data was protected throughout the project.
+
+Django Allauth Framework was used for the user registration process and handled the creation of users, authentication of data and protection of sensitive information such as passwords. It also allowed the website to determine whether a user was authenticated and logged in at any given time while accessing the website. This was useful as it allowed content to be resticted based on whether the user was authenticated. It also helped to ensure users could only edit and delete their own comments.
+
+The views.py files also made use of `@login_required` decorators to ensure that unauthorised users would not be able to access restricted parts of the website even if they entered the exact urls to access them. 
 
 
 <a id="tech-used"></a>
@@ -506,6 +566,8 @@ Automated tests were created to test the function of
 
 - Bootstrap
 - Django
+- PostgreSQL
+- Cloudinary
 - Google Fonts
 - Font Awesome
 
@@ -513,6 +575,7 @@ Automated tests were created to test the function of
 
 ### Tools & Programs
 
+- Heroku
 - Balsamiq
 - LucidCharts
 - Web3Forms
@@ -531,9 +594,6 @@ The live link can be found here - [Inkspire, https://github.com/mitalic004/Inksp
 
 <hr>
 
-<a id="security"></a>
-### Security Measures
-
 <a id="credits"></a>
 ## Credits
 
@@ -543,7 +603,7 @@ The project brief and primary learning and README.md template was supplied by [C
 
 Supplementary learning resources which were referenced throughout the project are listed below:
 
-- I Think Therefore I Blog Walkthrough Project by Code Institute was referred to throughout the development of the project.
+- "I Think Therefore I Blog" Walkthrough Project by Code Institute was referred to throughout the development of the project. I customised the models, views and templates when creating the website.
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - [Web3Forms](https://docs.web3forms.com/)
 - [Microsoft Copilot](https://copilot.microsoft.com/)
