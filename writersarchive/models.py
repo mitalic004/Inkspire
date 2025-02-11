@@ -4,7 +4,12 @@ from django.utils.text import slugify
 from cloudinary.models import CloudinaryField
 
 POSTSTATUS = ((0, "Draft"), (1, "Published"))
-RATING = ((0, "Not Rated"), (1, "★"), (2, "★★"), (3, "★★★"), (4, "★★★★"), (5, "★★★★★"))
+RATING = (
+    (0, "Not Rated"), (1, "★"),
+    (2, "★★"), (3, "★★★"),
+    (4, "★★★★"), (5, "★★★★★")
+)
+
 
 # Genre Cover Image Model
 class GenreCoverImage(models.Model):
@@ -17,15 +22,22 @@ class GenreCoverImage(models.Model):
     def __str__(self):
         return f"{self.genre}"
 
+
 # Story Model
 class Story(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="stories")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE,
+        related_name="stories"
+    )
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     summary = models.TextField(max_length=500)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    genre = models.ForeignKey(GenreCoverImage, on_delete=models.CASCADE, related_name="genres")
+    genre = models.ForeignKey(
+        GenreCoverImage, on_delete=models.CASCADE,
+        related_name="genres"
+    )
     status = models.IntegerField(choices=POSTSTATUS, default=0)
 
     class Meta:
@@ -41,10 +53,17 @@ class Story(models.Model):
     def __str__(self):
         return f"{self.title} | written by {self.author}"
 
+
 # Comment Model
 class Comment(models.Model):
-    post = models.ForeignKey(Story, on_delete=models.CASCADE, related_name="comments")
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    post = models.ForeignKey(
+        Story, on_delete=models.CASCADE,
+        related_name="comments"
+    )
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE,
+        related_name="commenter"
+    )
     rating = models.IntegerField(choices=RATING, default=0)
     body = models.TextField()
     approved = models.BooleanField(default=False)

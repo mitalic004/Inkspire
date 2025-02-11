@@ -8,15 +8,19 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-12 col-md-8">
+            <!-- Submission Page Title -->
             <h2>Story Submission Form:</h2>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 my-5">
             <div class="card card-body">
+                <!-- Only Allows Submissions from Logged In User -->
                 {% if user.is_authenticated %}
                 <h3>Submit your own stories and have them posted on our page!</h3>
+                <!-- Displays Current User -->
                 <p>Submitting as: {{ user.username }}</p>
+                <!-- Submission Form -->
                 <form id="submitForm" method="post" class="text-left-align" style="margin-top: 1.3em;">
                     {{ submission_form | crispy }}
                     {% csrf_token %}

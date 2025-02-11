@@ -6,11 +6,13 @@ from django.http import HttpResponseRedirect
 from .models import Story, Comment
 from .forms import CommentForm, SubmissionForm
 
-# Create your views here.
+
+# Display Published Posts as a List on the Landing Page
 class StoryList(generic.ListView):
     queryset = Story.objects.filter(status=1)
     template_name = "writersarchive/index.html"
     paginate_by = 6
+
 
 # Display Post
 @login_required
@@ -41,7 +43,10 @@ def post_detail(request, slug):
             comment.author = request.user
             comment.post = post
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment submitted and awaiting approval.')
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment submitted and awaiting approval.'
+            )
 
     comment_form = CommentForm()
 
@@ -56,6 +61,7 @@ def post_detail(request, slug):
         },
     )
 
+
 # Edit Comment
 def comment_edit(request, slug, comment_id):
     """
@@ -68,16 +74,24 @@ def comment_edit(request, slug, comment_id):
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
+        # Only allows comment to be edited if the user is same as the commenter
         if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Comment Updated!'
+            )
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+            messages.add_message(
+                request, messages.ERROR,
+                'Error updating comment!'
+            )
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 # Delete Comment
 def comment_delete(request, slug, comment_id):
@@ -88,13 +102,21 @@ def comment_delete(request, slug, comment_id):
     post = get_object_or_404(queryset, slug=slug)
     comment = get_object_or_404(Comment, pk=comment_id)
 
+    # Only allows comment to be deleted if the user is same as the commenter
     if comment.author == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Comment deleted!')
+        messages.add_message(
+            request, messages.SUCCESS,
+            'Comment deleted!'
+        )
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
+        messages.add_message(
+            request, messages.ERROR,
+            'You can only delete your own comments!'
+        )
 
     return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 # Submission Page
 @login_required
@@ -110,12 +132,20 @@ def submission_page(request):
             submission.status = 0
             submission.save()
             # Successful Submission Message
-            messages.add_message(request, messages.SUCCESS, 'Story submitted and awaiting approval.'
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Story submitted and awaiting approval.'
             )
             return redirect("writersarchive/submission.html")
         else:
-            messages.add_message(request, messages.ERROR, 'Error submitting story!')
+            messages.add_message(
+                request, messages.ERROR,
+                'Error submitting story!'
+            )
     else:
         submission_form = SubmissionForm()
 
-    return render(request, "writersarchive/submission.html", {"submission_form": submission_form})
+    return render(
+        request, "writersarchive/submission.html",
+        {"submission_form": submission_form}
+    )
