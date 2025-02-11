@@ -622,6 +622,27 @@ Heroku will require you to create an account and log in before you can use the s
 
 <hr>
 
+### Cloudinary API
+
+Cloudinary was used to store images used in the project.
+The Cloudinary API requires users to create an account and log in.
+
+- Once an account is created, click **Dashboard** on the left side menu.
+- From **Product Environment**, click **Go to API Keys**.
+- Click **Generate New API Key** and name it.
+- In your 'env.py' file, add `os.environ.setdefault(CLOUDINARY_URL=cloudinary://<your_api_key>:<your_api_secret>@<your_cloud_name>)`
+  - Replace the <text> with the relevant information from your generated API key.
+- You will now be able to use Cloudinary API in your project.
+
+### Cloning a GitHub Reposistory
+
+- On GitHub.com, navigate to the repository you want to clone.
+- Click the **Code** button.
+- Copy the URL for the repository.
+- Open Git Bash or your chosen terminal.
+- Navigate to the directory where you want to clone the repository.
+- Type: `git clone <copied_URL>`.
+- Press Enter to create your local clone.
 
 <a id="credits"></a>
 ## Credits
