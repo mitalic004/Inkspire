@@ -222,6 +222,7 @@ The website was creating using Django and included several templates which exten
 
 ![Registration]()
 ![Login]()
+![Login Authentication]()
 ![Login Message]()
 
 - List of Published Posts
