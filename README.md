@@ -584,15 +584,41 @@ The views.py files also made use of `@login_required` decorators to ensure that 
 <a id="deployment"></a>
 ## Deployment
 
-### GitHub
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, navigate to the Settings tab 
-  - From the source section drop-down menu, select the Master Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+This project was deployed using Heroku; the live link can be found here - [Inkspire, https://inkspire-17c10e106355.herokuapp.com/](https://inkspire-17c10e106355.herokuapp.com/)
 
-The live link can be found here - [Inkspire, https://github.com/mitalic004/Inkspire](https://github.com/mitalic004/Inkspire)
+### Heroku
+
+Heroku will require you to create an account and log in before you can use the service.
+
+- Click **New** > **Create New App**.
+- Choose a unique app name, choose a region (EU or USA) and click **Create App**.
+- In the new app, click **Settings**, click **Reveal Config Vars**, and set your environment variables.
+
+| Key | Value |
+| --- | --- |
+| `DATABASE_URL` | your own PostGreSQL database URL |
+| `DISABLE_COLLECTSTATIC` | 1 (_temporary, will be removed later_) |
+| `CLOUDINARY_URL` | your own Cloudinary API key |
+| `SECRET_KEY` | any random secret key |
+
+- In the project terminal, type the code you will need to install project requirements:
+  - `pip3 install gunicorn~=20.1`
+  - `pip3 install -r requirements.txt`
+  - `pip3 freeze --local > requirements.txt`
+- Create an 'env.py' file (_only local, will not be uploaded to GitHub_) at the root directory which contains the following:
+    - `import os`
+    - `os.environ["DATABASE_URL"]='CI database URL'`
+    - `os.environ["SECRET_KEY"]="Your secret key"`
+- Create a file at the root directory called Procfile. In this file enter: `web: gunicorn my_project.wsgi` (_replace my_project with the name of your project_)
+- In 'settings.py', set DEBUG to False. **YOU SHOULD ALWAYS SET DEBUG TO FALSE BEFORE DEPLOYING FOR SECURITY**
+- Add `,'.herokuapp.com'` to the ALLOWED_HOSTS list in 'settings.py'
+- Add, commit and push your code.
+- Go back to Heroku, click on the **Deploy** tab.
+- Connect your project to GitHub.
+- Scroll to the bottom and click **Deploy Branch** to deploy your project.
 
 <hr>
+
 
 <a id="credits"></a>
 ## Credits
