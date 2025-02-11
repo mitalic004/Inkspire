@@ -38,9 +38,9 @@ The users can register an account and login to browse through published stories 
   - [Asset Generation](#ai-assets)
   - [Automated Unit Testing](#ai-test)
   - [Overall Impact](#ai-impact)
+- [Security Measures](#security)
 - [Technology Used](#tech-used)
 - [Deployment](#deployment)
-  - [Security Measures](#security)
 - [Credits](#credits)
 
 
@@ -203,14 +203,14 @@ The website was creating using Django and included several templates which exten
   - Links change depending on whether user is logged in or not
   - Message in header showing whether user is logged in or not
 
-![Navigation Bar]()
+![Navigation Bar](static/assets/images-readme/Features_NavBar.png)
 
 - Responsive Hero Section on Landing Page
   - Introduction to the website
   - Responsive in accordance with appropriate breakpoints
   - Main page seen when both logged in and logged out
 
-![Hero Section]()
+![Hero Section](static/assets/images-readme/Features_HeroSection.png)
 
 - Registration/Login
   - Users can create accounts and login
@@ -220,10 +220,10 @@ The website was creating using Django and included several templates which exten
   - Separate pages for registration and log in, with authentication created using Django models
   - Message notifications will be shown after you have registered/logged in
 
-![Registration]()
-![Login]()
-![Login Authentication]()
-![Login Message]()
+![Registration](static/assets/images-readme/Features_Registration.png)
+![Login](static/assets/images-readme/Features_Login.png)
+![Login Authentication](static/assets/images-readme/Features_Login_Authentication.png)
+![Login Message](static/assets/images-readme/Features_Login_Message.png)
 
 - List of Published Posts
   - When logged in, users can see a list of published posts on the landing page
@@ -232,7 +232,7 @@ The website was creating using Django and included several templates which exten
   - All posts display the title, author and date created
   - All posts display a header image depending on what genre they are classified as
 
-![Published Posts]()
+![Published Posts](static/assets/images-readme/Features_PubPost.png)
 
 - Post Display
   - Users can select specific posts to view them fully in a separate page
@@ -241,8 +241,8 @@ The website was creating using Django and included several templates which exten
   - The story content is displayed below the header in it's own section
   - There is a comments section under every story
 
-![Post Detail Header]()
-![Post Detail Story]()
+![Post Detail Header](static/assets/images-readme/Features_Post_Header.png)
+![Post Detail Story](static/assets/images-readme/Features_Post_Story.png)
 
 - Comments Section
   - Individual comments sections are displayed under every post
@@ -252,38 +252,38 @@ The website was creating using Django and included several templates which exten
   - Users can also create new comments and will recieve a message to confirm their comment has been submit
   - Submit comments will have to be approved by admins before they can be seen by all users on the site
 
-![Comments Section]()
-![Comments Message]()
-![Comments Delete]()
+![Comments Section](static/assets/images-readme/Features_Comments.png)
+![Comments Message](static/assets/images-readme/Features_Comments_Message.png)
+![Comments Delete](static/assets/images-readme/Features_Comments_Delete.png)
 
 - Submission Form
   - There is a submission form page for users to submit their own stories
   - Users will recieve a message to confirm their story has been submit
   - Submit stories must be approved before they are displayed in the post list on the landing page
 
-![Submission Form]()
-![Submission Message]()
+![Submission Form](static/assets/images-readme/Features_Submit.png)
+![Submission Message](static/assets/images-readme/Features_Submit_Message.png)
 
 - Admin Panel
   - Admin users can access an admin site where they can view all users, stories and comments to moderate them
   - Admins can add stories and comments through the admin site
   - Admins can approve new and edited comments and submit posts before they are displayed on the website
 
-![Admin Panel]()
+![Admin Panel](static/assets/images-readme/Features_Admin.png)
 
 - Logout
   - Users can logout of their accounts after they are done with their session
   - Clicking the log out link will redirect the user to a confirmation page
   - Message notification will be shown after you have logged out
 
-![Logout Page]()
-![Logout Message]()
+![Logout Page](static/assets/images-readme/Features_Logout.png)
+![Logout Message](static/assets/images-readme/Features_Logout_Message.png)
 
 - Footer
   - Copyright details
   - Links to GitHub repository and social media sites
 
-![Footer]()
+![Footer](static/assets/images-readme/Features_Footer.png)
 
 
 <a id="database"></a>
