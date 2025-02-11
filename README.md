@@ -150,7 +150,7 @@ The website consists of three pages with distinct sections to ensure a good user
 
 <a id="testing"></a>
 ## Testing
-Validation of HTML/CSS/JavaScript, Lighthouse Audits, Bugs
+Validation of HTML/CSS/JavaScript/Python, Lighthouse Audits, Bugs
 
 <a id="valid-test"></a>
 ### Verification & Validation
@@ -172,13 +172,33 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
   - Some error were returned when passing through the official [W3C validator](https://validator.w3.org/nu/)
   - These could not be addressed in the time available
 
-![HTML Validation Homepage](assets/images-readme/HTMLValidation_Home.png)
-![HTML Validation Enquiry](assets/images-readme/HTMLValidation_Enquiry.png)
+<details>
+<summary>Click to HTML Validation</summary>
+
+- base.html
+![HTML Validation Base Template](assets/images-readme/HTMLValidation_Base.png)
+
+- index.html
+![HTML Validation Index Template](assets/images-readme/HTMLValidation_Index.png)
+
+- post_detail.html
+![HTML Validation Post Detail Template](assets/images-readme/HTMLValidation_PostDetail.png)
+
+- submission.html
+![HTML Validation Submission Template](assets/images-readme/HTMLValidation_SubmissionForm.png)
+
+</details>
 
 - CSS
   - One error was found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
 
+<details>
+<summary>Click to CSS Validation</summary>
+
+- File
 ![CSS Validation](assets/images-readme/CSSValidation.png)
+
+</details>
 
 <hr>
 
@@ -186,54 +206,72 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
   - No errors were found when passing through the official [JSHint validator](https://jshint.com/)
   - Some warnings were made, but most were regarding different versions of JavaScript
 
+<details>
+<summary>Click to JavaScript Validation</summary>
+
+- File
 ![JavaScript Validation](assets/images-readme/JSValidation.png)
+
+</details>
 
 <hr>
 
 - Python
-  - No errors were found when passing through the [JSHint validator](https://jshint.com/)
+  - No errors were found when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/)
 
+<details>
+<summary>Click to Python Validation</summary>
+
+- File
 ![Python Validation](assets/images-readme/PythonValidation.png)
+
+</details>
+
 
 <hr>
 
 <a id="manual-test"></a>
 ### Manual Testing
-| Function | Expected Outcome | Does it work? |
+
+Manual testing was carried out throughout the development of the project.
+
+| Function | Expected Outcome | Pass/Fail |
 | ----------- | ----------- | ----------- |
-| General - Header | The header is displayed at the top of the page and sticks there. | Yes |
-| General - Logo Link | The logo and title direct the user to the homepage when clicked. | Yes |
-| General - NavBar | The NavBar links direct the user to the relevant pages when clicked. | Yes |
-| General - NavBar Login | The Login link opens a pop-up when clicked. | Yes |
-| General - Login | The Login pop-up allows the user to sign in or register. | Yes |
-| General - Login Validation | The Login pop-up validates user's input if they sign in. | Yes |
-| General - Login Registration Link | The Login pop-up redirects the user to the Registration page if the button is clicked. | Yes |
-| General - Account Dropdown | When logged in, an account dropdown menu will appear with borrowed and favourited books listed. | Yes |
-| General - Page Reset | The page reloads after logging out. | Yes |
-| General - Footer | The footer is displayed at the bottom of the page and shows social media links and a copyright. | Yes |
-| General - Footer Links | The social media links direct the user to the relevant websites when clicked. | Yes |
-| General - Footer Links New Page | The social media links open in new pages. | Yes |
-| General - Responsivity | The website is responsive and changes format depending on the device size. | Yes |
-| Homepage - Hero Section | The Jumbrotron is displayed with a background image, text overlay and Borrow and Favourite buttons. | Yes |
-| Homepage - Hero Section Buttons | The Borrow and Favourite buttons work as intended when clicked. | Yes |
-| Homepage - Info Cards | The cards are displayed side by side with book titles and images. | Yes |
-| Homepage - Info Cards Hover | The cards are expanded to show a short description and Borrow and Favourite buttons when hovered over. | Yes |
-| Registration - Display Fields | The relevant fields are all visible and can be interacted with. | Yes |
-| Registration - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Yes |
-| Registration - Submit Pop-Up | The button displays a pop-up when clicked to inform the user their details have been submitted. | Yes |
-| Enquiry - Display Fields | The relevant fields are all visible and can be interacted with. | Yes |
-| Enquiry - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Yes |
-| Enquiry - Submit Success | The page will show a success message to inform the user the query has been sent. | Yes |
-| Enquiry - Submit Email | The query is be sent to a dummy email after it is submitted. | Yes |
-| Enquiry - Form Reset | The form resets after returning from the submit page. | Yes |
-| Kids Page - Opens Short Story | The page opens a short story when the title is clicked. | Yes |
-| Kids Page - Page Buttons Work | The page turns to a new page when the relevant buttons are clicked. | Yes |
-| Kids Page - Read Aloud Button | The page reads the story aloud and stops playing when the relevant button is clicked. | Yes |
+| General - Header | The header is displayed at the top of the page and sticks there. | Pass |
+| General - Logo Link | The logo and title direct the user to the homepage when clicked. | Pass |
+| General - NavBar | The NavBar links direct the user to the relevant pages when clicked. | Pass |
+| General - NavBar Login | The Login link opens a pop-up when clicked. | Pass |
+| General - Login | The Login pop-up allows the user to sign in or register. | Pass |
+| General - Login Validation | The Login pop-up validates user's input if they sign in. | Pass |
+| General - Login Registration Link | The Login pop-up redirects the user to the Registration page if the button is clicked. | Pass |
+| General - Account Dropdown | When logged in, an account dropdown menu will appear with borrowed and favourited books listed. | Pass |
+| General - Page Reset | The page reloads after logging out. | Pass |
+| General - Footer | The footer is displayed at the bottom of the page and shows social media links and a copyright. | Pass |
+| General - Footer Links | The social media links direct the user to the relevant websites when clicked. | Pass |
+| General - Footer Links New Page | The social media links open in new pages. | Pass |
+| General - Responsivity | The website is responsive and changes format depending on the device size. | Pass |
+| Homepage - Hero Section | The Jumbrotron is displayed with a background image, text overlay and Borrow and Favourite buttons. | Pass |
+| Homepage - Hero Section Buttons | The Borrow and Favourite buttons work as intended when clicked. | Pass |
+| Homepage - Info Cards | The cards are displayed side by side with book titles and images. | Pass |
+| Homepage - Info Cards Hover | The cards are expanded to show a short description and Borrow and Favourite buttons when hovered over. | Pass |
+| Registration - Display Fields | The relevant fields are all visible and can be interacted with. | Pass |
+| Registration - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Pass |
+| Registration - Submit Pop-Up | The button displays a pop-up when clicked to inform the user their details have been submitted. | Pass |
+| Enquiry - Display Fields | The relevant fields are all visible and can be interacted with. | Pass |
+| Enquiry - Input Validation | The text boxes validates the user's input to ensure data is in the correct format. | Pass |
+| Enquiry - Submit Success | The page will show a success message to inform the user the query has been sent. | Pass |
+| Enquiry - Submit Email | The query is be sent to a dummy email after it is submitted. | Pass |
+| Enquiry - Form Reset | The form resets after returning from the submit page. | Pass |
+| Kids Page - Opens Short Story | The page opens a short story when the title is clicked. | Pass |
+| Kids Page - Page Buttons Work | The page turns to a new page when the relevant buttons are clicked. | Pass |
+| Kids Page - Read Aloud Button | The page reads the story aloud and stops playing when the relevant button is clicked. | Pass |
 
 <hr>
 
 <a id="auto-test"></a>
 ### Automated Testing
+
+Automated tests were created to test the function of 
 
 <hr>
 
@@ -249,6 +287,8 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
 - As a user I can view an account page so that I can see my account details.
 - As a user I can search for post titles so that I can find specific posts.
 - As a user I can click the author name so that I can see other posts by the same author.
+- As a user I can add new cover images so that I can personalise posts I submit.
+- As a user I can view ratings on comments so that I can 
 
 
 <a id="ai-implementation"></a>
@@ -329,7 +369,7 @@ The project brief and primary learning and README.md template was supplied by [C
 
 Supplementary learning resources which were referenced throughout the project are listed below:
 
-- I Think Therefore I Blog Walkthrough Project by Code Institute
+- I Think Therefore I Blog Walkthrough Project by Code Institute was referred to throughout the development of the project.
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 - [Web3Forms](https://docs.web3forms.com/)
 - [Microsoft Copilot](https://copilot.microsoft.com/)
