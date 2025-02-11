@@ -48,17 +48,23 @@ The users can register an account and login to browse through published stories 
 
 <a id="user-stories"></a>
 ### User Stories
-- As a user I can view the landing page so that access the website. `MustDo`
-- As a user I can register an account and login to the site so that view posts. `MustDo`
-- As a user I can view a list of posts so that I can select which post I want to view. `MustDo`
-- As a user I can click on a post so that I can view the whole post. `MustDo`
-- As a user I can view comments on an individual post so that I can read opinions on the post. `MustDo`
-- As a user I can leave comments on a post so that I can share my opinion about the post. `MustDo`
-- As a user I can edit or delete my comments so that change my comments. `MustDo`
-- As an admin I can create, read, update and delete posts so that I can manage the content on the website. `MustDo`
-- As an admin I can create draft posts so that I can finish writing the content later. `ShouldDo`
-- As an admin I can delete any comments so that I can moderate the website. `ShouldDo`
-- As a user I can submit content so that it will be displayed on the website. `CouldDo`
+- As a user I can view the landing page so that access the website. `Must Have`
+- As a user I can register an account and login to the site so that view posts. `Must Have`
+- As a user I can view a list of posts so that I can select which post I want to view. `Must Have`
+- As a user I can click on a post so that I can view the whole post. `Must Have`
+- As a user I can view comments on an individual post so that I can read opinions on the post. `Must Have`
+- As a user I can leave comments on a post so that I can share my opinion about the post. `Must Have`
+- As a user I can edit or delete my comments so that change my comments. `Must Have`
+- As an admin I can create, read, update and delete posts so that I can manage the content on the website. `Must Have`
+- As an admin I can create draft posts so that I can finish writing the content later. `Must Have`
+- As an admin I can delete any comments so that I can moderate the website. `Should Have`
+- As a user I can submit content so that it will be displayed on the website. `Could Have`
+
+- As a user I can like posts so that I can view them later. `Won't Have`
+- As a user I can view an account page so that I can see my account details. `Won't Have`
+- As a user I can search for post titles so that I can find specific posts. `Won't Have`
+- As a user I can click the author name so that I can see other posts by the same author. `Won't Have`
+- As a user I can add new cover images so that I can personalise posts I submit. `Won't Have`
 
 <hr>
 
@@ -68,7 +74,7 @@ Wireframes for all pages of the website were created before coding began. Versio
 
 For the most part, the designs remained consistent with the implementation, but some minor formatting changes were made in the final version.
 
-- Landing Page
+- **Landing Page**
 
 <details>
 <summary>Click to see Landing Page Wireframes</summary>
@@ -87,7 +93,7 @@ For the most part, the designs remained consistent with the implementation, but 
 
 </details>
 
-- Registration Page
+- **Registration Page**
 
 <details>
 <summary>Click to see Registration Page Wireframes</summary>
@@ -100,7 +106,7 @@ For the most part, the designs remained consistent with the implementation, but 
 
 </details>
 
-- Login Page
+- **Login Page**
 
 <details>
 <summary>Click to see Registration Page Wireframes</summary>
@@ -113,7 +119,7 @@ For the most part, the designs remained consistent with the implementation, but 
 
 </details>
 
-- Post Detail Page
+- **Post Detail Page**
 
 <details>
 <summary>Click to see Post Detail Page Wireframes</summary>
@@ -126,7 +132,7 @@ For the most part, the designs remained consistent with the implementation, but 
 
 </details>
 
-- Submission Form Page
+- **Submission Form Page**
 
 <details>
 <summary>Click to see Submission Form Page Wireframes</summary>
@@ -149,52 +155,149 @@ For the most part, the designs remained consistent with the implementation, but 
 The project used two sans-serif fonts which were implemented via [Google Fonts](https://fonts.google.com).
 
 - [Overlock](https://fonts.google.com/specimen/Overlock) was used as the main logo and heading font to make it stand out and fit with the theme of the website.
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all the links and main content of the website to ensure easy readability.
+- [Lato](https://fonts.google.com/specimen/Lato) was used for all the links and main content of the website. As the website is focused on allowing users to read stories, it was important to pick a font which ensured easy readability.
 
 <hr>
 
 <a id="colour-scheme"></a>
 ### Colour Scheme
 
-The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with. Some colours were not used in the final implementation, as they did not contrast enough to provide a suitable user experience.
+The colours used were taken from [Coolors](https://coolors.co/). Contrasting colours were used for the background, text and other elements (like buttons and info cards) to make the website easier to read and interact with. Below is a breakdown of where the respective colours were used throughout the website.
 
 6A513B Coffee:		
 - `#01161E` (Rich Black) used for: header & footer backgrounds, main font
-- `#003052` (Prussian Blue) used for: main background, button background
-- `#A50021` (Madder) used for: hyperlinks
-- `#F1E9D2` (Parchment) used for: post background, header & footer font, homepage headings font, button text
-- `#DACDB2` (Dun) used for: comment reply background
-- `#C3B091` (Khaki) used for: comment background
-- `#4B3621` (Cafe Noir) used for: selected button
+- `#003052` (Prussian Blue) used for: main background, button hover background
+- `#A50021` (Madder) used for: delete button hover background, author labels on posts 
+- `#F1E9D2` (Parchment) used for: post background, header & footer font, headings font, button text
+- `#DACDB2` (Dun) used for: comment background
+- `#C3B091` (Khaki) used for: comment background for author of post
+- `#4B3621` (Cafe Noir) used for: button background
 
 ![Colour Palette](assets/images-readme/Colour-Palette.png)
 
+Both the fonts and colours were defined as `:root` variables so they could be easily referenced throughout the project and stylesheets.
+
+```css
+:root {
+    --heading-font: "Overlock", serif;
+    --text-font: "Lato", sans-serif;
+    --rich-black: #01161E;
+    --bg-blue: #003052;
+    --link-red: #A50021;
+    --parchment: #F1E9D2;
+    --cmt-op-bg: #C3B091;
+    --cmt-bg: #DACDB2;
+    --bg-brown: #4B3621;
+}
+```
 
 <a id="features"></a>
 ## Website Features
 
-The website consists of three pages with distinct sections to ensure a good user experience. All features on the website were implemented using a combination of HTML5, CSS (including Bootstrap) and JavaScript and are responsive on multiple device sizes in accordance with appropriate breakpoints. 
+The website was creating using Django and included several templates which extended from a base template to ensure consistency across pages in the website and provide a good user experience. All features on the website were implemented using a combination of HTML5, CSS (including Bootstrap), JavaScript and Python. The site is responsive on multiple device sizes in accordance with appropriate breakpoints.
 
 - Header Navigation Bar
   - A sticky navigation bar on all pages with the logo and website title which redirects to the homepage
   - Links to other pages on the website
+  - Links change depending on whether user is logged in or not
+  - Message in header showing whether user is logged in or not
 
-![Navigation Bar](assets/images-readme/NavBar.png)
+![Navigation Bar]()
 
-- Feature
-  - Explaination
+- Responsive Hero Section on Landing Page
+  - Introduction to the website
+  - Responsive in accordance with appropriate breakpoints
+  - Main page seen when both logged in and logged out
 
-![FeatImg]()
+![Hero Section]()
+
+- Registration/Login
+  - Users can create accounts and login
+  - Logged out users not will only be able to see the landing page
+  - Logged in users be able to access the rest of the website pages as well
+  - Prompt to register/login on landing page
+  - Separate pages for registration and log in, with authentication created using Django models
+  - Message notifications will be shown after you have registered/logged in
+
+![Registration]()
+![Login]()
+![Login Message]()
+
+- List of Published Posts
+  - When logged in, users can see a list of published posts on the landing page
+  - 6 posts are displayed at a time, ordered by date created with the most recent showing first
+  - Navigation is provided to look through the list of posts
+  - All posts display the title, author and date created
+  - All posts display a header image depending on what genre they are classified as
+
+![Published Posts]()
+
+- Post Display
+  - Users can select specific posts to view them fully in a separate page
+  - Post display has a header with the title, author, date created and summary shown at the top left
+  - Cover image based on genre is also shown in the header
+  - The story content is displayed below the header in it's own section
+  - There is a comments section under every story
+
+![Post Detail Header]()
+![Post Detail Story]()
+
+- Comments Section
+  - Individual comments sections are displayed under every post
+  - Users can see all approved comments
+  - Users have the option to edit or delete their own comments
+  - Deleting comments will prompt users with a confirmation message
+  - Users can also create new comments and will recieve a message to confirm their comment has been submit
+  - Submit comments will have to be approved by admins before they can be seen by all users on the site
+
+![Comments Section]()
+![Comments Message]()
+![Comments Delete]()
+
+- Submission Form
+  - There is a submission form page for users to submit their own stories
+  - Users will recieve a message to confirm their story has been submit
+  - Submit stories must be approved before they are displayed in the post list on the landing page
+
+![Submission Form]()
+![Submission Message]()
+
+- Admin Panel
+  - Admin users can access an admin site where they can view all users, stories and comments to moderate them
+  - Admins can add stories and comments through the admin site
+  - Admins can approve new and edited comments and submit posts before they are displayed on the website
+
+![Admin Panel]()
+
+- Logout
+  - Users can logout of their accounts after they are done with their session
+  - Clicking the log out link will redirect the user to a confirmation page
+  - Message notification will be shown after you have logged out
+
+![Logout Page]()
+![Logout Message]()
 
 - Footer
   - Copyright details
   - Links to GitHub repository and social media sites
 
-![Footer](assets/images-readme/Footer.png)
+![Footer]()
+
 
 <a id="agile"></a>
 ## Agile
+
+### GitHub Project Board
+
 [Project Board Link](https://github.com/users/mitalic004/projects/2)
+
+The GitHub project board was used as an Agile tool for this project. All User Stories were added to the board and broken down into smaller tasks to help improve the workflow for the duration of the project.
+
+### MoSCoW Prioritization
+
+All user stories were created prior to beginning the project and were prioritized to ensure a suitable MVP was created before adding additional funtionality. The MoSCoW prioritization was used to sort user stories and the appropriate labels were applied on the issues in the project board.
+
+All user stories marked `Must Have`, `Should Have` and `Could Have` were completed and additional features not in the scope were marked as `Won't Have` and included in the future features section.
 
 
 <a id="testing"></a>
@@ -208,44 +311,44 @@ Validation of HTML/CSS/JavaScript/Python, Lighthouse Audits, Bugs
 Good scores were achieved for both Desktop and Mobile when passing through the official [Google Lighthouse](https://pagespeed.web.dev/)
 
 - Desktop
-![Desktop Results](assets/images-readme/Lighthouse_Desktop.png)
+![Desktop Results](static/assets/images-readme/Inkspire_Lighthouse_Desktop.png)
 
 - Mobile
-![Mobile Results](assets/images-readme/Lighthouse_Mobile.png)
+![Mobile Results](static/assets/images-readme/Inkspire_Lighthouse_Mobile.png)
 
 <hr>
 
 #### Validation Testing
 
 - HTML
-  - Some error were returned when passing through the official [W3C validator](https://validator.w3.org/nu/)
-  - These could not be addressed in the time available
+  - All HTML pages were passed through the official [W3C validator](https://validator.w3.org/nu/)
+  - All error listed were caused by using Django block templates to create the HTML pages and cannot be changed.
+  - There were no errors apart from these.
 
 <details>
 <summary>Click to HTML Validation</summary>
 
 - base.html
-![HTML Validation Base Template](assets/images-readme/HTMLValidation_Base.png)
+![HTML Validation Base Template](static/assets/images-readme/HTMLValidation_Base.png)
 
 - index.html
-![HTML Validation Index Template](assets/images-readme/HTMLValidation_Index.png)
+![HTML Validation Index Template](static/assets/images-readme/HTMLValidation_Index.png)
 
 - post_detail.html
-![HTML Validation Post Detail Template](assets/images-readme/HTMLValidation_PostDetail.png)
+![HTML Validation Post Detail Template](static/assets/images-readme/HTMLValidation_PostDetail.png)
 
 - submission.html
-![HTML Validation Submission Template](assets/images-readme/HTMLValidation_SubmissionForm.png)
+![HTML Validation Submission Template](static/assets/images-readme/HTMLValidation_SubmissionForm.png)
 
 </details>
 
 - CSS
-  - One error was found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
 
 <details>
 <summary>Click to CSS Validation</summary>
 
-- File
-![CSS Validation](assets/images-readme/CSSValidation.png)
+![CSS Validation](static/assets/images-readme/CSSValidation.png)
 
 </details>
 
@@ -258,21 +361,44 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
 <details>
 <summary>Click to JavaScript Validation</summary>
 
-- File
-![JavaScript Validation](assets/images-readme/JSValidation.png)
+![JavaScript Validation](static/assets/images-readme/JSValidation.png)
 
 </details>
 
 <hr>
 
 - Python
-  - No errors were found when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/)
+  - All python pages were passed through the [CI Python Linter](https://pep8ci.herokuapp.com/)
+  - No errors were found
 
 <details>
 <summary>Click to Python Validation</summary>
 
-- File
-![Python Validation](assets/images-readme/PythonValidation.png)
+
+- inkspire/urls.py
+![Python Validation](static/assets/images-readme/PythonValidation_URLs_Inkspire.png)
+
+- writersarchive/urls.py
+![Python Validation](static/assets/images-readme/PythonValidation_URLs_WritersArchive.png)
+
+- admin.py
+![Python Validation](static/assets/images-readme/PythonValidation_Admin.png)
+
+- apps.py
+![Python Validation](static/assets/images-readme/PythonValidation_Apps.png)
+
+- models.py
+![Python Validation](static/assets/images-readme/PythonValidation_Models.png)
+
+- views.py
+![Python Validation](static/assets/images-readme/PythonValidation_Views.png)
+
+- forms.py
+![Python Validation](static/assets/images-readme/PythonValidation_Forms.png)
+
+- test_forms.py
+![Python Validation](static/assets/images-readme/PythonValidation_TestForms.png)
+
 
 </details>
 
@@ -337,7 +463,6 @@ Automated tests were created to test the function of
 - As a user I can search for post titles so that I can find specific posts.
 - As a user I can click the author name so that I can see other posts by the same author.
 - As a user I can add new cover images so that I can personalise posts I submit.
-- As a user I can view ratings on comments so that I can 
 
 
 <a id="ai-implementation"></a>
