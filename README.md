@@ -174,7 +174,7 @@ The colours used were taken from [Coolors](https://coolors.co/). Contrasting col
 - `#C3B091` (Khaki) used for: comment background for author of post
 - `#4B3621` (Cafe Noir) used for: button background
 
-![Colour Palette](assets/images-readme/Colour-Palette.png)
+![Colour Palette](static/assets/images-readme/Inkspire_ColourPalette.png)
 
 Both the fonts and colours were defined as `:root` variables so they could be easily referenced throughout the project and stylesheets.
 
@@ -293,7 +293,7 @@ Code Institute's PostgreSQL database was used for this project.
 
 ### Entity Relationship Diagrams
 
-ERDs for the database models were created prior to the start of the project and were used to inform it's development and structure.
+ERDs for the database models were created prior to the start of the project and were used to inform the development and structure.
 The User model was built using the Django Allauth Library.
 
 ![Main Models](static/assets/images-readme/Inkspire_ERD.png)
@@ -314,6 +314,8 @@ The GitHub project board was used as an Agile tool for this project. All User St
 All user stories were created prior to beginning the project and were prioritized to ensure a suitable MVP was created before adding additional funtionality. The MoSCoW prioritization was used to sort user stories and the appropriate labels were applied on the issues in the project board.
 
 All user stories marked `Must Have`, `Should Have` and `Could Have` were completed and additional features not in the scope were marked as `Won't Have` and included in the future features section.
+
+![Project Board](static/assets/images-readme/Inkspire_Project_Board.png)
 
 
 <a id="testing"></a>
@@ -342,7 +344,7 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
   - There were no errors apart from these.
 
 <details>
-<summary>Click to HTML Validation</summary>
+<summary>Click to see HTML Validation</summary>
 
 - base.html
 ![HTML Validation Base Template](static/assets/images-readme/HTMLValidation_Base.png)
@@ -362,7 +364,7 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
 
 <details>
-<summary>Click to CSS Validation</summary>
+<summary>Click to see CSS Validation</summary>
 
 ![CSS Validation](static/assets/images-readme/CSSValidation.png)
 
@@ -375,7 +377,7 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
   - Some warnings were made, but most were regarding different versions of JavaScript
 
 <details>
-<summary>Click to JavaScript Validation</summary>
+<summary>Click to see JavaScript Validation</summary>
 
 ![JavaScript Validation](static/assets/images-readme/JSValidation.png)
 
@@ -388,7 +390,7 @@ Good scores were achieved for both Desktop and Mobile when passing through the o
   - No errors were found
 
 <details>
-<summary>Click to Python Validation</summary>
+<summary>Click to see Python Validation</summary>
 
 
 - inkspire/urls.py
