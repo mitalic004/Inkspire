@@ -1,18 +1,17 @@
 # Inkspire
 
+![Responsive Mockup](static/assets/images-readme/Inkspire_Responsive.png)
+
 <p align="center">
-| <a href="https://github.com/mitalic004/Inkspire" target="_blank">Live Project</a> |
+| <a href="https://inkspire-17c10e106355.herokuapp.com/" target="_blank">Live Project</a> |
 </p>
 
 <a id="overview"></a>
 ## Overview
-Inkspire is a assessed portfolio project developed as part of the Code Institute Full Stack Software Developer Bootcamp, with the intention of demonstrating proficiency in Python, Django [] to create a responsive website.
+Inkspire is a assessed portfolio project developed as part of the Code Institute Full Stack Software Developer Bootcamp.
+The intention of this project was to create an responsive website built with Django where users can read stories and submit their own writing to be published on the site.
 
-The intention of this project was to create an interactive website for []
-
-The users can register an account and login to []
-
-![Responsive Mockup]()
+The users can register an account and login to browse through published stories and leave comments on posts to share their thoughts. The website also includes a submission form where users can send their own stories to be approved and displayed.
 
 
 ## Contents
@@ -49,17 +48,17 @@ The users can register an account and login to []
 
 <a id="user-stories"></a>
 ### User Stories
-- As a user I can view the landing page so that access the website.
-- As a user I can register an account and login to the site so that view posts.
-- As a user I can view a list of posts so that I can select which post I want to view.
-- As a user I can click on a post so that I can view the whole post.
-- As a user I can view comments on an individual post so that I can read opinions on the post.
-- As a user I can leave comments on a post so that I can share my opinion about the post.
-- As a user I can edit or delete my comments so that change my comments.
-- As an admin I can create, read, update and delete posts so that I can manage the content on the website.
-- As an admin I can create draft posts so that I can finish writing the content later.
-- As an admin I can delete any comments so that I can moderate the website.
-- As a user I can submit content so that it will be displayed on the website.
+- As a user I can view the landing page so that access the website. `MustDo`
+- As a user I can register an account and login to the site so that view posts. `MustDo`
+- As a user I can view a list of posts so that I can select which post I want to view. `MustDo`
+- As a user I can click on a post so that I can view the whole post. `MustDo`
+- As a user I can view comments on an individual post so that I can read opinions on the post. `MustDo`
+- As a user I can leave comments on a post so that I can share my opinion about the post. `MustDo`
+- As a user I can edit or delete my comments so that change my comments. `MustDo`
+- As an admin I can create, read, update and delete posts so that I can manage the content on the website. `MustDo`
+- As an admin I can create draft posts so that I can finish writing the content later. `ShouldDo`
+- As an admin I can delete any comments so that I can moderate the website. `ShouldDo`
+- As a user I can submit content so that it will be displayed on the website. `CouldDo`
 
 <hr>
 
@@ -67,28 +66,78 @@ The users can register an account and login to []
 ### Wireframes
 Wireframes for all pages of the website were created before coding began. Versions for desktop, tablet and mobile size were created to reflect the responsive design expected. 
 
-For the most part, the designs remained consistent with the implementation, but some changes were made - they will be shown and explained below.
+For the most part, the designs remained consistent with the implementation, but some minor formatting changes were made in the final version.
 
 - Landing Page
-  - The homepage has stayed mostly the same as the wireframe.
 
-![Homepage Desktop](assets/images-readme/Wireframe-Homepage-Desktop.png)
+<details>
+<summary>Click to see Landing Page Wireframes</summary>
 
-![Homepage Tablet & Mobile](assets/images-readme/Wireframe-Homepage-TabletMobile.png)
+- Desktop Logged Out
+![Landing Page Desktop Logged Out](static/assets/images-readme/Wireframe_LandingPage_Desktop_LoggedOut.png)
 
-- 2 Page
-  - AA
+- Desktop Logged In
+![Landing Page Desktop Logged In](static/assets/images-readme/Wireframe_LandingPage_Desktop_LoggedIn.png)
 
-![2 Desktop]()
+- Tablet
+![Landing Page Tablet](static/assets/images-readme/Wireframe_LandingPage_Tablet.png)
 
-![2 Tablet & Mobile]()
+- Mobile
+![Landing Page Mobile](static/assets/images-readme/Wireframe_LandingPage_Mobile.png)
 
-- 3 Page
-  - AA
-  
-![3 Desktop]()
+</details>
 
-![3 Tablet & Mobile]()
+- Registration Page
+
+<details>
+<summary>Click to see Registration Page Wireframes</summary>
+
+- Desktop
+![Registration Page Desktop](static/assets/images-readme/Wireframe_Register_Desktop.png)
+
+- Tablet & Mobile
+![Registration Page Tablet & Mobile](static/assets/images-readme/Wireframe_Register_TabletMobile.png)
+
+</details>
+
+- Login Page
+
+<details>
+<summary>Click to see Registration Page Wireframes</summary>
+
+- Desktop
+![Registration Page Desktop](static/assets/images-readme/Wireframe_Login_Desktop.png)
+
+- Tablet & Mobile
+![Registration Page Tablet & Mobile](static/assets/images-readme/Wireframe_Login_TabletMobile.png)
+
+</details>
+
+- Post Detail Page
+
+<details>
+<summary>Click to see Post Detail Page Wireframes</summary>
+
+- Desktop
+![Post Detail Page Desktop](static/assets/images-readme/Wireframe_PostDetail_Desktop.png)
+
+- Tablet & Mobile
+![Post Detail Page Tablet & Mobile](static/assets/images-readme/Wireframe_PostDetail_TabletMobile.png)
+
+</details>
+
+- Submission Form Page
+
+<details>
+<summary>Click to see Submission Form Page Wireframes</summary>
+
+- Desktop
+![Submission Form Page Desktop](static/assets/images-readme/Wireframe_SubmissionForm_Desktop.png)
+
+- Tablet & Mobile
+![Submission Form Page Tablet & Mobile](static/assets/images-readme/Wireframe_SubmissionForm_TabletMobile.png)
+
+</details>
 
 
 <a id="design"></a>
