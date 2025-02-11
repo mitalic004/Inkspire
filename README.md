@@ -523,12 +523,12 @@ AI was used to create some sections of HTML code, such as the hero section on th
 <a id="ai-debug"></a>
 ### Debugging
 
-I did attempt to use AI for assistance with debugged at various stages throughout the development of the project, but it was often ineffective and I found it more practical to search online for similar issues and aplly the solutions to my own work
+I did attempt to use AI for assistance with debugged at various stages throughout the development of the project, but it was often ineffective and I found it more practical to search online for similar issues and apply the solutions to my own work
 
 <a id="ai-assets"></a>
 ### Asset Generation
 
-I mostly used AI to generate assets for the site, such as some of the header images. As time was resticted for this project, it was more practical to use AI generated assets instead of manually searching for suitable images. The post contents (summaries and content) were also generated using AI to populate the database and site to better test what the final site would look like with actual content instead of test posts.
+I mostly used AI to generate assets for the site, such as some of the header images. As time was resticted for this project, it was more practical to use AI generated assets instead of manually searching for suitable images. The post contents (summaries and stories) were also generated using AI to populate the database and site to better test what the final site would look like with actual content instead of test posts.
 
 <a id="ai-test"></a>
 ### Automated Unit Testing
