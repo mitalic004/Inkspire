@@ -634,6 +634,8 @@ The Cloudinary API requires users to create an account and log in.
   - Replace the <text> with the relevant information from your generated API key.
 - You will now be able to use Cloudinary API in your project.
 
+<hr>
+
 ### Cloning a GitHub Reposistory
 
 - On GitHub.com, navigate to the repository you want to clone.
