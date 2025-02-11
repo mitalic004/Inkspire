@@ -318,6 +318,11 @@ ul {
     padding-right: 1rem;
 }
 
+/* Aligns an element to the right of it's parent */
+.push-right {
+    float: right;
+}
+
 .post-cover-image {
     max-width: inherit;
     padding-top: 1rem;

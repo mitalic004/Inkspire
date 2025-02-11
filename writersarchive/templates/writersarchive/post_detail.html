@@ -64,6 +64,10 @@
                         <span class="font-weight-normal">
                             {{ comment.created_on }}
                         </span> wrote:
+                        <!-- Displays Rating -->
+                        <span class="push-right">
+                            Rating: {{ comment.get_rating_display }}
+                        </span>
                         <hr>
                     </p>
                     <div id="comment{{ comment.id }}">
